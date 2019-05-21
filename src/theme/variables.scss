@@ -74,4 +74,20 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --ion-font-family: 'Oraqle Script';
+  --ion-font-family: 'BalooBhai-Regular';
 }
+@font-face {
+  font-family: 'Oraqle Script';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/OraqleScript.ttf');
+}
+@font-face {
+  font-family: 'BalooBhai-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/BalooBhai-Regular.ttf');
+}
+

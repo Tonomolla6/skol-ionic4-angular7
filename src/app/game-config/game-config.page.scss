@@ -1,0 +1,15 @@
+$color: red;
+
+@mixin my-border($color) {
+  
+}
+// @include my-border(green);
+// border: 2px solid blue;
+#mesa1 {
+  fill: #702829;
+  margin-top: 85px;
+}
+#mesa2 {
+  fill: #702829;
+  margin-top: -7px;
+}
