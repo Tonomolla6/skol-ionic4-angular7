@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 282.4 627.4" style="enable-background:new 0 0 282.4 627.4;" xml:space="preserve">
+	 viewBox="0 0 254.8 644.4" style="enable-background:new 0 0 254.8 644.4;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#754C24;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	.st0{fill:#572020;stroke:#000000;stroke-width:17;}
 </style>
-<rect x="66.5" y="488.4" class="st0" width="149" height="28"/>
-<rect x="33.5" y="48.4" class="st0" width="43" height="576"/>
-<rect x="204.5" y="48.4" class="st0" width="43" height="576"/>
-<path class="st0" d="M265.7,60.9H16.8C9.2,60.9,3,54.7,3,47.1V16.8C3,9.2,9.2,3,16.8,3h248.8c7.6,0,13.8,6.2,13.8,13.8v30.3
-	C279.5,54.7,273.3,60.9,265.7,60.9z"/>
+<g id="Sin_título-1" transform="translate(-279 -828)">
+	<rect id="Rectangle_7" x="342.1" y="1326.6" class="st0" width="128.1" height="28.3"/>
+	<rect id="Rectangle_8" x="313.8" y="882.4" class="st0" width="37" height="581.5"/>
+	<rect id="Rectangle_9" x="460.8" y="882.4" class="st0" width="37" height="581.5"/>
+	<path id="Path_36" class="st0" d="M513.3,895H299.4c-7.1-0.6-12.4-6.8-11.9-14v-30.6c-0.5-7.1,4.8-13.4,11.9-14h213.9
+		c7.1,0.6,12.4,6.8,11.9,14v30.6C525.7,888.2,520.4,894.4,513.3,895z"/>
+</g>
 </svg>

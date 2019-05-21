@@ -1,9 +1,41 @@
-#botellasinicio{
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    transform: translateY(50px) translateX(150px);;
+div.partesuperior {
+    display: flex;
+    position: relative;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 105px;
 }
-#barrasuperior{
-    transform: translateY(70px);
+
+div.partesuperior h1 {
+    font-family: 'Oraqle Script';
+    font-size: 60px;
+    line-height: 53px;
+    margin-top: 35px;
+}
+
+div.partesuperior .botellasinicio {
+    width: 100px;
+}
+
+div.barra {
+    position: relative;
+}
+
+div.barra div.sillas {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 95px;
+}
+
+div.barra div.sillas .silla {
+    width: 45px;
+}
+
+div.boton_siguiente {
+    position: absolute;
+    bottom: 0;
 }
