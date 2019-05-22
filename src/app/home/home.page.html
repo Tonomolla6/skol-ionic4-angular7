@@ -1,7 +1,7 @@
 <ion-content color="primary">
 
   <div class="partesuperior">
-    <h1>Long live <br>&nbsp;&nbsp;&nbsp;&nbsp; the party</h1>
+    <h1>Long live <br>&nbsp;&nbsp;&nbsp;&nbsp;the party</h1>
     <img class="botellasinicio" src="assets/images/Botellas juntas inicio.svg"/>
   </div>
 
@@ -14,8 +14,17 @@
       <img class="silla" id="silla4" src="assets/images/Silla.svg"/>
     </div>
   </div>
-  
-  <ion-footer>
-    <img class="boton" src="assets/images/Boton del juego_1.svg"/>
-  </ion-footer>
+  Name 1 : {{ user1 }}
+  <form (ngSubmit)="users()">
+    <ion-col id="lista">
+      <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Enter User 1"></ion-input>
+      <ion-input placeholder="Enter User 2"></ion-input>
+      <ion-input placeholder="Enter User 3"></ion-input>
+    </ion-col>
+    <br>
+    <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>
+  </form>
 </ion-content>
+<ion-footer>
+    <img class="boton" src="assets/images/Boton del juego_1.svg"/>
+</ion-footer>

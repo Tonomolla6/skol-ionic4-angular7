@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+user1:string;
+users(){
+  console.log(this.user1);
+  console.log('Form submit');
+}
+onClick() {
+}
 
 }
