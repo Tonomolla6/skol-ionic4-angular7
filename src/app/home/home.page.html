@@ -6,7 +6,10 @@
   </div>
 
   <div class="barra">
-    <img class="barrasuperior" src="assets/images/Barra de arriba.svg"/>
+    <img class="barrasuperior" width="294px" src="assets/images/barra_de_arriba_copas.svg"/>
+    <div class="barra_top_img">
+      <div class="barra_top2_img"></div>
+    </div>
     <div class="sillas">
       <img class="silla" id="silla1" src="assets/images/Silla.svg"/>
       <img class="silla" id="silla2" src="assets/images/Silla.svg"/>
@@ -14,17 +17,22 @@
       <img class="silla" id="silla4" src="assets/images/Silla.svg"/>
     </div>
   </div>
-  Name 1 : {{ user1 }}
-  <form (ngSubmit)="users()">
-    <ion-col id="lista">
-      <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Enter User 1"></ion-input>
-      <ion-input placeholder="Enter User 2"></ion-input>
-      <ion-input placeholder="Enter User 3"></ion-input>
-    </ion-col>
-    <br>
-    <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>
-  </form>
+
+  <div class="formuario_usuarios">
+    Name 1 : {{ user1 }}
+    <form (ngSubmit)="users()">
+      <ion-col id="lista">
+        <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Enter User 1"></ion-input>
+        <ion-input placeholder="Enter User 2"></ion-input>
+        <ion-input placeholder="Enter User 3"></ion-input>
+      </ion-col>
+      <br>
+      <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>
+    </form>
+  </div>
+
+  <div class="boton">
+      <img width="260px" src="assets/images/Boton del juego_1.svg"/>
+      <h2>EMPIEZA EL JUEGO</h2>
+  </div>
 </ion-content>
-<ion-footer>
-    <img class="boton" src="assets/images/Boton del juego_1.svg"/>
-</ion-footer>
