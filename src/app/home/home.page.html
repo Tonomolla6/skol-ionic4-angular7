@@ -14,12 +14,11 @@
       <img class="silla" id="silla4" src="assets/images/Silla.svg"/>
     </div>
   </div>
-  Name 1 : {{ user1 }}
   <form (ngSubmit)="users()">
     <ion-col id="lista">
       <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Enter User 1"></ion-input>
-      <ion-input placeholder="Enter User 2"></ion-input>
-      <ion-input placeholder="Enter User 3"></ion-input>
+      <ion-input type="text" name="user2" [(ngModel)]="user2" placeholder="Enter User 2"></ion-input>
+      <ion-input type="text" name="user3" [(ngModel)]="user3" placeholder="Enter User 3"></ion-input>
     </ion-col>
     <br>
     <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>

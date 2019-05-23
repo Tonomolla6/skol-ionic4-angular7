@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'questions', loadChildren: './questions/questions.module#QuestionsPageModule' },
+  { path: 'questions/:user1/:user2/:user3', loadChildren: './questions/questions.module#QuestionsPageModule' },
   { path: 'game-config', loadChildren: './game-config/game-config.module#GameConfigPageModule' },
 ];
 
