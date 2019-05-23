@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Storage } from '@ionic/storage';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -14,11 +13,11 @@ export class HomePage {
   users: object[];
   posicion: string;
 
-  constructor(public router: Router, private storage: Storage, public activeRoute:ActivatedRoute) {
+  constructor(public router: Router, public activeRoute:ActivatedRoute) {
     this.users = [
-      {name:'Jugador 1'},
-      {name:'Jugador 2'},
-      {name:'Jugador 3'}
+      {name:'jugador_1'},
+      {name:'jugador_2'},
+      {name:'jugador_3'}
     ]
     localStorage.clear();
   }
@@ -30,7 +29,7 @@ export class HomePage {
       //console.log(this.activeRoute.snapshot.paramMap.get(`${usuario["name"]}`));
     //});
 
-    console.log(this.activeRoute.snapshot.paramMap.get('Jugador 1'));
+    console.log(this.activeRoute.snapshot.paramMap.get('jugador_1'));
 
     ///
     //let users = localStorage.getItem('usuarios')
@@ -44,6 +43,6 @@ export class HomePage {
   }
   mas_jugadores(){
     let totalUser = this.users.length + 1;
-    this.users.push({name: `Jugador ${totalUser}`});
+    this.users.push({name: `jugador_${totalUser}`});
   }
 }
