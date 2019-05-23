@@ -10,7 +10,7 @@ export class QuestionsPage implements OnInit {
   constructor( public activeRoute:ActivatedRoute) { }
   random;
   // user1:string
-  user1 = this.activeRoute.snapshot.paramMap.get('user1');
+  user1 = localStorage.getItem("user1");
   user2 = this.activeRoute.snapshot.paramMap.get('user2');
   user3 = this.activeRoute.snapshot.paramMap.get('user3');
   

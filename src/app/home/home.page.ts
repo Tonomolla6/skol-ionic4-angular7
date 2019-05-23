@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-home',
@@ -8,21 +10,12 @@ import { Router } from '@angular/router';
 })
 
 export class HomePage {
-  constructor(public router: Router) {}
-
-  user1:string;
-  user2:string;
-  user3:string;
-  x = 3;
-
-  users(){
-    console.log(this.user1);
-    console.log(this.user2);
-    console.log('x is ' + this.x);
-
-  }
+  constructor(public router: Router, private storage: Storage) {}
+  user1: string;
+  user2: string;
+  user3: string;
   onClick() {
-    this.router.navigate (['questions', this.user1, this.user2, this.user3])
+    localStorage.setItem('user1', this.user1);
+    this.router.navigate (['questions']);
   }
 }
-  
