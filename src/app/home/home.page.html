@@ -19,7 +19,7 @@
   </div>
 
   <div class="formuario_usuarios">
-    <h3>OTRA RONDA?</h3>
+    <h3>OTRA RONDA? {{ user3 }}</h3>
     <form>
       <ion-col id="lista_usuarios">
         <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" placeholder="{{item.name}}"></ion-input>

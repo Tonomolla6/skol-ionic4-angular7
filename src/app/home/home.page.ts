@@ -13,15 +13,16 @@ export class HomePage {
   users: object[];
   posicion: string;
 
-  constructor(public router: Router, public activeRoute:ActivatedRoute) {
-    this.users = [
+    constructor(public router: Router, public activeRoute:ActivatedRoute) {
+      this.users = [
       {name:'jugador_1'},
       {name:'jugador_2'},
       {name:'jugador_3'}
     ]
     localStorage.clear();
   }
-  
+
+  user3 = this.activeRoute.snapshot.paramMap.get('jugador_1');
 
   onClick() {
     //this.users.forEach(function(usuario) {
@@ -46,3 +47,4 @@ export class HomePage {
     this.users.push({name: `jugador_${totalUser}`});
   }
 }
+
