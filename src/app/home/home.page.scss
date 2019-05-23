@@ -60,6 +60,26 @@ div.boton_siguiente {
     bottom: 0;
 }
 
+div.formuario_usuarios h3{
+    font-size: 20px;
+    margin-left: 20px;
+}
+div.formuario_usuarios #lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.formuario_usuarios #lista ion-input {
+    width: 150px;
+    border-bottom: 1.5px solid #572020;
+}
+
+.input_usuarios input{
+    padding: 0px !important;
+}
+
 div.boton {
     display: flex;
     justify-content: center;
@@ -74,6 +94,7 @@ div.boton h2 {
     font-size: 21px;
     transform: translateY(-2px);
 }
+
 
 @media(max-width:344px) {
     div.partesuperior h1 {

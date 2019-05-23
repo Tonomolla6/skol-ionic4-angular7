@@ -19,20 +19,20 @@
   </div>
 
   <div class="formuario_usuarios">
-    Name 1 : {{ user1 }}
+    <h3>OTRA RONDA? {{ user1 }}</h3>
     <form (ngSubmit)="users()">
       <ion-col id="lista">
-        <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Enter User 1"></ion-input>
-        <ion-input placeholder="Enter User 2"></ion-input>
-        <ion-input placeholder="Enter User 3"></ion-input>
+        <ion-input id="tono" class="input_usuarios" [(ngModel)]="user1" name="user1" placeholder="Jugador 1"></ion-input>
+        <ion-input class="input_usuarios" placeholder="Jugador 2"></ion-input>
+        <ion-input class="input_usuarios" placeholder="Jugador 3"></ion-input>
       </ion-col>
       <br>
-      <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>
     </form>
   </div>
 
   <div class="boton">
       <img width="260px" src="assets/images/Boton del juego_1.svg"/>
+      
       <h2>EMPIEZA EL JUEGO</h2>
   </div>
 </ion-content>
