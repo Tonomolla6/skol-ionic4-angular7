@@ -4,22 +4,42 @@ div.partesuperior {
     top: 0;
     justify-content: space-around;
     align-items: center;
-    height: 105px;
+    height: 109px;
 }
 
 div.partesuperior h1 {
     font-family: 'Oraqle Script';
-    font-size: 60px;
-    line-height: 53px;
-    margin-top: 35px;
+    font-size: 69px;
+    line-height: 60px;
+    margin-top: 37px;
+    margin-left: 18px;
 }
 
 div.partesuperior .botellasinicio {
-    width: 100px;
+    width: 111px;
+    margin-left: 22px;
+    margin-top: 6px;
 }
 
 div.barra {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.barra div.barra_top_img {
+    width: 100%;
+    height: 147.5px;
+    border: 3.5px solid black;
+    background-color: #602929;
+}
+
+div.barra div.barra_top2_img {
+    height: 15.5px;
+    width: 100%;
+    border-bottom: 3.5px solid black;
+    background-color: #7b3a3a;
 }
 
 div.barra div.sillas {
@@ -28,7 +48,7 @@ div.barra div.sillas {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    top: 95px;
+    top: 90px;
 }
 
 div.barra div.sillas .silla {
@@ -38,4 +58,52 @@ div.barra div.sillas .silla {
 div.boton_siguiente {
     position: absolute;
     bottom: 0;
+}
+
+div.formuario_usuarios h3{
+    font-size: 20px;
+    margin-left: 20px;
+}
+div.formuario_usuarios #lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.formuario_usuarios #lista ion-input {
+    width: 150px;
+    border-bottom: 1.5px solid #572020;
+}
+
+.input_usuarios input{
+    padding: 0px !important;
+}
+
+div.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 130px);
+}
+
+div.boton h2 {
+    position: absolute;
+    font-size: 21px;
+    transform: translateY(-2px);
+}
+
+
+@media(max-width:344px) {
+    div.partesuperior h1 {
+        font-size: 60px;
+    }
+}
+
+@media(max-width:320px) {
+    div.partesuperior h1 {
+        font-size: 50px;
+    }
 }
