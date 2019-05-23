@@ -21,17 +21,14 @@
   <div class="formuario_usuarios">
     <h3>OTRA RONDA?</h3>
     <form>
-      <ion-col id="lista">
-        <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Jugador 1"></ion-input>
-        <ion-input type="text" name="user2" [(ngModel)]="user2" placeholder="Jugador 2"></ion-input>
-        <ion-input type="text" name="user3" [(ngModel)]="user3" placeholder="Jugador 3"></ion-input>
+      <ion-col id="lista_usuarios">
+        <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" placeholder="{{item.name}}"></ion-input>
       </ion-col>
-      <br>
-      <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>
+      <div class="mierda" (click)="mas_jugadores()"></div>
     </form>
   </div>
 
-  <div class="boton">
+  <div (click)="onClick()" class="boton">
       <img width="260px" src="assets/images/Boton del juego_1.svg"/>
       
       <h2>EMPIEZA EL JUEGO</h2>
