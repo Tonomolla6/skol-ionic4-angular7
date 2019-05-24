@@ -60,18 +60,34 @@ div.boton_siguiente {
     bottom: 0;
 }
 
-div.formuario_usuarios h3{
+div.formulario_usuarios {
+    height: 100%;
+    max-height: calc(100vh - 560px);
+}
+
+form.usuarios {
+    height: 100%;
+    max-height: calc(100vh - 560px);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.formulario_usuarios h3{
     font-size: 20px;
     margin-left: 20px;
 }
-div.formuario_usuarios #lista_usuarios {
+
+div.formulario_usuarios #lista_usuarios {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-div.formuario_usuarios #lista_usuarios ion-input {
+div.formulario_usuarios #lista_usuarios ion-input {
     width: 150px;
     border-bottom: 1.5px solid #572020;
 }
@@ -95,12 +111,15 @@ div.boton h2 {
     transform: translateY(-2px);
 }
 
-.mierda {
-    width: 40px;
-    height: 40px;
-    background-color: red;
+.plus {
+    width: 25px;
+    height: 25px;
+    background-image: url(src\assets\images\plus.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-@media(max-width:344px) {
+
+@media(max-width:345px) {
     div.partesuperior h1 {
         font-size: 60px;
     }
@@ -109,5 +128,28 @@ div.boton h2 {
 @media(max-width:320px) {
     div.partesuperior h1 {
         font-size: 50px;
+    }
+}
+
+/* Iphone 6/7/8 */
+@media(max-height:740px) {
+    div.boton h2 {
+        font-size: 17px;
+        transform: translateY(-5px);
+    }
+    div.boton img {
+        max-width: 80%;
+    }
+    form.usuarios {
+        max-height: calc(100vh - 490px);
+    }
+    div.formulario_usuarios {
+        max-height: calc(100vh - 490px);
+    }
+    div.barra div.barra_top_img {
+        height: 130.5px;
+    }
+    div.barra div.sillas .silla {
+        width: 40px;
     }
 }

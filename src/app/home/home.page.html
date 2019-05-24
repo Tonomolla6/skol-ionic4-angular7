@@ -18,14 +18,17 @@
     </div>
   </div>
 
-  <div class="formuario_usuarios">
-    <h3>OTRA RONDA? {{ user1 }}</h3>
-    <form (ngSubmit)="users()">
-      <ion-col id="lista">
-        <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Jugador 1"></ion-input>
-        <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" [(ngModel)]="item.value" placeholder="{{item.name}}"></ion-input>
-      </ion-col>
-      <div class="mierda" (click)="mas_jugadores()"></div>
+  <div class="formulario_usuarios">
+    <h3>OTRA RONDA?</h3>
+    <form class="usuarios">
+      <div>
+        <ion-col id="lista_usuarios">
+          <!--  Muestra en numero de imputs como arrays haya en "users" -->
+          <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" [(ngModel)]="item.value" placeholder="{{item.name}}"></ion-input>
+        </ion-col>
+        <!-- Añade otra posicion al array "users" -->
+        <div class="plus" (click)="mas_jugadores()"></div>
+      </div>
     </form>
   </div>
 

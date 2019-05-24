@@ -12,9 +12,9 @@ export class HomePage {
   users: object[];
   constructor(public router: Router, public activeRoute:ActivatedRoute) {
     this.users = [
-      {name:'user1', value:''},
-      {name:'user2', value:''},
-      {name:'user3', value:''}
+      {name:'Jugador 1', value:''},
+      {name:'Jugador 2', value:''},
+      {name:'Jugador 3', value:''}
     ]
   }
 
@@ -25,6 +25,11 @@ export class HomePage {
   onClick() {
     //this.router.navigate (['questions'])
     console.log(this.users);
+  }
+
+  mas_jugadores() {
+    let totalUser = this.users.length + 1;
+    this.users.push({name: `Jugador ${totalUser}`, value:''});
   }
 }
 
