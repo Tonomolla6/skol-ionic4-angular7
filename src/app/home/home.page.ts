@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +9,22 @@ import { Router } from '@angular/router';
 })
 
 export class HomePage {
-  constructor(public router: Router) {}
+  users: object[];
+  constructor(public router: Router, public activeRoute:ActivatedRoute) {
+    this.users = [
+      {name:'user1', value:''},
+      {name:'user2', value:''},
+      {name:'user3', value:''}
+    ]
+  }
 
-  user1:string;
-  user2:string;
-  user3:string;
+  //user = this.activeRoute.snapshot.paramMap.get('user1');
+
   x = 3;
 
-  users(){
-    console.log(this.user1);
-    console.log(this.user2);
-    console.log('x is ' + this.x);
-
-  }
   onClick() {
-    this.router.navigate (['questions', this.user1, this.user2, this.user3])
+    //this.router.navigate (['questions'])
+    console.log(this.users);
   }
 }
   

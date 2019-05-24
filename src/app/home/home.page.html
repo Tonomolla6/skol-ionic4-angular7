@@ -19,12 +19,11 @@
   </div>
 
   <div class="formuario_usuarios">
-    <h3>OTRA RONDA?</h3>
+    <h3>OTRA RONDA? {{ user1 }}</h3>
     <form (ngSubmit)="users()">
       <ion-col id="lista">
         <ion-input type="text" name="user1" [(ngModel)]="user1" placeholder="Jugador 1"></ion-input>
-        <ion-input type="text" name="user2" [(ngModel)]="user2" placeholder="Jugador 2"></ion-input>
-        <ion-input type="text" name="user3" [(ngModel)]="user3" placeholder="Jugador 3"></ion-input>
+        <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" [(ngModel)]="item.value" placeholder="{{item.name}}"></ion-input>
       </ion-col>
       <br>
       <ion-button (click)="onClick()" type="submit" >PLAY!</ion-button>
