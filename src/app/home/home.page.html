@@ -1,15 +1,21 @@
 <ion-content color="primary">
 
-  <div class="partesuperior">
+  <!-- div oculto -->
+  <div id="atras_vista_uno" (click)="atras_vista_uno()" class="atras"></div>
+
+  <div id="partesuperior" class="partesuperior">
     <h1>Long live <br>&nbsp;&nbsp;&nbsp;&nbsp;the party</h1>
     <img class="botellasinicio" src="assets/images/Botellas juntas inicio.svg"/>
   </div>
 
-  <div class="barra">
+  <div id="barra" class="barra">
     <img class="barrasuperior" width="294px" src="assets/images/barra_de_arriba_copas.svg"/>
     <div class="barra_top_img">
       <div class="barra_top2_img"></div>
+      <!-- div oculto -->
+      <h2 id="carta_titulo">Cartas</h2>
     </div>
+
     <div class="sillas">
       <img class="silla" id="silla1" src="assets/images/Silla.svg"/>
       <img class="silla" id="silla2" src="assets/images/Silla.svg"/>
@@ -18,22 +24,41 @@
     </div>
   </div>
 
-  <div class="formulario_usuarios">
-    <h3>OTRA RONDA?</h3>
-    <form class="usuarios">
+  <div id="formulario_usuarios" class="formulario_usuarios">
+      <h3>OTRA RONDA?</h3>
+      <form class="usuarios">
+        <div>
+          <ion-col id="lista_usuarios">
+            <!--  Muestra en numero de imputs como arrays haya en "users" -->
+            <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" [(ngModel)]="item.value" placeholder="{{item.name}}"></ion-input>
+          </ion-col>
+          <!-- Añade otra posicion al array "users" -->
+          <div class="plus" (click)="mas_jugadores()"></div>
+        </div>
+      </form>
+    </div>
+  
+    <div id="formulario_cartas" class="formulario_cartas">
+      <img (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
       <div>
-        <ion-col id="lista_usuarios">
-          <!--  Muestra en numero de imputs como arrays haya en "users" -->
-          <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" [(ngModel)]="item.value" placeholder="{{item.name}}"></ion-input>
-        </ion-col>
-        <!-- Añade otra posicion al array "users" -->
-        <div class="plus" (click)="mas_jugadores()"></div>
+        <div id="carta" class="carta">
+          <div class="carta_fondo"></div>
+        </div>
+        <h2 id="titulo_carta" class="titulo_carta">{{cartas[0]}}</h2>
       </div>
-    </form>
+      <img (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
+    </div>
+  
+
+  <!-- div oculto -->
+  <div id="boton_vista_dos" class="boton">
+      <img width="260px" src="assets/images/boton_del_juego_2.svg"/>
+      
+      <h2>POR FAVOR!!!!</h2>
   </div>
 
-  <div (click)="onClick()" class="boton">
-      <img width="260px" src="assets/images/Boton del juego_1.svg"/>
+  <div id="boton_vista_uno" (click)="boton_vista_uno()" class="boton">
+      <img width="260px" src="assets/images/boton_del_juego_1.svg"/>
       
       <h2>EMPIEZA EL JUEGO</h2>
   </div>

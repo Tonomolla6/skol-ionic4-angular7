@@ -1,3 +1,17 @@
+div.atras {
+    opacity: 0;
+    transition: 1s;
+    height: 25px;
+    width: 35px;
+    background-image: url(src\assets\images\flecha_atras.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 16px;
+    margin-top: 13px;
+    position: absolute;
+    z-index: 3;
+}
+
 div.partesuperior {
     display: flex;
     position: relative;
@@ -5,6 +19,7 @@ div.partesuperior {
     justify-content: space-around;
     align-items: center;
     height: 109px;
+    transition: 1s;
 }
 
 div.partesuperior h1 {
@@ -26,6 +41,7 @@ div.barra {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 1s;
 }
 
 div.barra div.barra_top_img {
@@ -33,6 +49,7 @@ div.barra div.barra_top_img {
     height: 147.5px;
     border: 3.5px solid black;
     background-color: #602929;
+    text-align: center;
 }
 
 div.barra div.barra_top2_img {
@@ -40,6 +57,16 @@ div.barra div.barra_top2_img {
     width: 100%;
     border-bottom: 3.5px solid black;
     background-color: #7b3a3a;
+}
+div.barra div.barra_top_img h2 {
+    font-size: 85px;
+    font-family: 'Oraqle Script';
+    transform: translateY(-40px);
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    opacity: 0;
+    transition: 1s;
 }
 
 div.barra div.sillas {
@@ -49,10 +76,12 @@ div.barra div.sillas {
     justify-content: space-around;
     align-items: center;
     top: 90px;
+    z-index: 3;
 }
 
 div.barra div.sillas .silla {
     width: 45px;
+    transition: 1s;
 }
 
 div.boton_siguiente {
@@ -63,12 +92,13 @@ div.boton_siguiente {
 div.formulario_usuarios {
     height: 100%;
     max-height: calc(100vh - 560px);
+    transition: 0.2s;
 }
 
 form.usuarios {
     height: 100%;
     overflow: scroll;
-    position: relative;
+    position: relative; 
 }
 
 div.formulario_usuarios h3{
@@ -88,10 +118,42 @@ div.formulario_usuarios #lista_usuarios ion-input {
     border-bottom: 1.5px solid #572020;
 }
 
-.input_usuarios input{
-    padding: 0px !important;
+div.formulario_cartas {
+    height: 100%;
+    max-height: calc(100vh - 445px);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(-50px);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
 }
 
+div.formulario_cartas img {
+    width: 25px;
+}
+
+div.formulario_cartas div.carta {
+    width: 250px;
+    height: 230px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+
+div.formulario_cartas div.carta div.carta_fondo {
+    width: 210px;
+    height: 200px;
+    background-color: black;
+}
+div.formulario_cartas h2 {
+    font-family: 'Oraqle Script';
+    font-size: 55px;
+    text-align: center;
+    margin-top: 5px;
+}
 div.boton {
     display: flex;
     justify-content: center;
@@ -105,6 +167,10 @@ div.boton h2 {
     position: absolute;
     font-size: 21px;
     transform: translateY(-2px);
+}
+
+#boton_vista_dos {
+    opacity: 0;
 }
 
 .plus {
@@ -147,5 +213,9 @@ div.boton h2 {
     }
     div.barra div.sillas .silla {
         width: 40px;
+    }
+    div.formulario_cartas {
+        height: 100%;
+        max-height: calc(100vh - 390px);
     }
 }
