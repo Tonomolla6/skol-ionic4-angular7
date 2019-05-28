@@ -37,6 +37,7 @@ export class HomePage {
       document.getElementById("boton_vista_dos").style.zIndex = "3";
       document.getElementById("formulario_usuarios").style.opacity = "0";
       document.getElementById("formulario_cartas").style.display = "flex";
+      document.getElementById("ajustes").style.display = "none";
       setTimeout(function(){
         document.getElementById("formulario_usuarios").style.display = "none";
         document.getElementById("formulario_cartas").style.opacity = "1";
@@ -45,7 +46,17 @@ export class HomePage {
 
     mas_jugadores() {
       let totalUser = this.users.length + 1;
-      this.users.push({name: `Jugador ${totalUser}`, value:''});
+      this.users.push({name: `Jugador ${totalUser}`, value:''}); /* id:`id_${totalUser}` */
+      /* document.getElementById("id_4").focus(); */
+      /* document.getElementById("plus").focus(); */
+    }
+
+    ajustes(estado) {
+      if (estado == "abrir") {
+        document.getElementById("ajuste_oculto_fondo").style.display = "flex";
+      } else if (estado == "cerrar") {
+        document.getElementById("ajuste_oculto_fondo").style.display = "none";
+      }
     }
 
     /* ESTA PARTE ES PARA LA VISTA DOS */
@@ -65,7 +76,7 @@ export class HomePage {
       document.getElementById("boton_vista_dos").style.opacity = "0";
       document.getElementById("boton_vista_dos").style.zIndex = "0";
       document.getElementById("formulario_cartas").style.opacity = "0";
-      
+      document.getElementById("ajustes").style.display = "block";
       setTimeout(function(){
         document.getElementById("formulario_usuarios").style.display = "block";
         document.getElementById("formulario_cartas").style.display = "none";
@@ -90,4 +101,3 @@ export class HomePage {
         document.getElementById("titulo_carta").innerHTML = this.cartas[this.h2_posicion];
       }
 }
-
