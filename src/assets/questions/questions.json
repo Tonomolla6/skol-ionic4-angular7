@@ -1,0 +1,41 @@
+{
+    "name": "Proyect X",
+    "questions" :[
+        {
+            "tipo": "Individual",
+            "id": 1,
+            "questions": [
+                {
+                    "question": "Pregunta Individual 1",
+                    "id": 1
+                },
+                {
+                    "question": "Pregunta Individual 2",
+                    "id": 2
+                },
+                {
+                    "question": "Pregunta Individual 3",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "tipo": "Grupo",
+            "id": 2,
+            "questions": [
+                {
+                    "question": "Pregunta Grupo 1",
+                    "id": 1
+                },
+                {
+                    "question": "Pregunta Grupo 2",
+                    "id": 2
+                },
+                {
+                    "question": "Pregunta Grupo 3",
+                    "id": 3
+                }
+            ]
+        }
+    ]
+}
