@@ -25,7 +25,7 @@
   </div>
 
   <div id="formulario_usuarios" class="formulario_usuarios">
-      <h3>OTRA RONDA?</h3>
+      <h3>UNA MESA PARA...</h3>
       <form class="usuarios">
         <div>
           <ion-col id="lista_usuarios">
@@ -54,20 +54,34 @@
   <div id="boton_vista_dos" class="boton">
       <img width="260px" src="assets/images/boton_del_juego_2.svg"/>
       
-      <h2>POR FAVOR!!!!</h2>
+      <h2>CON O SIN HIELO?</h2>
   </div>
 
   <div id="boton_vista_uno" (click)="boton_vista_uno()" class="boton">
       <img width="260px" src="assets/images/boton_del_juego_1.svg"/>
       
-      <h2>EMPIEZA EL JUEGO</h2>
+      <h2>CARTAS</h2>
   </div>
 
   <img (click)='ajustes("abrir")' id="ajustes" class="ajustes" width="30px" src="assets/images/ajustes.svg"/>
 
+  <!-- div oculto mensajes --> 
+  
   <div id="ajuste_oculto_fondo" class="ajuste_oculto_fondo">
     <div id="ajuste_oculto" class="ajuste_oculto">
-      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/x.svg"/>
+      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
     </div>
+
+    <div class="mensaje_alerta" id="mensaje_amigos">
+      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
+      <p>El minimo de jugadores son 2</p>
+    </div>
+
+    <div class="mensaje_alerta" id="mensaje_vacio">
+      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
+      <p>No ha inscrito a ningún jugador.</p>
+    </div>
+
   </div>
+
 </ion-content>

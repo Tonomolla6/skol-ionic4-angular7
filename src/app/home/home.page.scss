@@ -207,7 +207,7 @@ div.ajuste_oculto {
     width: 74%;
     height: 63%;
     background-color: #692222;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
@@ -220,6 +220,31 @@ div.ajuste_oculto img {
     right: 0;
     margin: 10px;
     top: 0;
+}
+
+div.mensaje_alerta {
+    position: absolute;
+    width: 80vw;
+    height: 150px;
+    background-color: #692222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 3px solid black;
+    display: none;
+    padding: 15px 10px 10px 10px;
+}
+
+div.mensaje_alerta img {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    top: 0;
+}
+
+div.mensaje_alerta p{
+    font-size: calc(19 * 80vw / 300);
 }
 
 @media(max-width:345px) {

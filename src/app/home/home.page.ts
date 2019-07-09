@@ -15,33 +15,49 @@ export class HomePage {
       {name:'Jugador 2', value:''},
       {name:'Jugador 3', value:''}
     ]
-    this.cartas = ["Fiesta", "Coma Etílico", "Futbol", "Famosos"];
+    this.cartas = ["Sin Mariconeos", "En pareja", "Piscina y amigos", "Piscina"];
     this.h2_posicion = 0;
   }
   /* ESTA PARTE ES PARA LA VISTA 1 */
     users: object[];
     
     boton_vista_uno() {
+      var x = 0;
       //this.router.navigate (['questions'])
-      console.log(this.users);
-      document.getElementById("partesuperior").style.opacity = "0";
-      document.getElementById("barra").style.transform = "translateY(-83px)";
-      document.getElementById("atras_vista_uno").style.opacity = "1";
-      document.getElementById("silla2").style.transform = "translateX(-80px)";
-      document.getElementById("silla3").style.transform = "translateX(80px)";
-      document.getElementById("silla1").style.opacity = "0";
-      document.getElementById("silla4").style.opacity = "0";
-      document.getElementById("carta_titulo").style.opacity = "1";
-      document.getElementById("boton_vista_uno").style.opacity = "0";
-      document.getElementById("boton_vista_dos").style.opacity = "1";
-      document.getElementById("boton_vista_dos").style.zIndex = "3";
-      document.getElementById("formulario_usuarios").style.opacity = "0";
-      document.getElementById("formulario_cartas").style.display = "flex";
-      document.getElementById("ajustes").style.display = "none";
-      setTimeout(function(){
-        document.getElementById("formulario_usuarios").style.display = "none";
-        document.getElementById("formulario_cartas").style.opacity = "1";
-      }, 200);
+      for(let i=0; i<this.users.length; i++) {
+        if (this.users[`${i}`].value == "") {
+          var x = x + 1;
+        };
+      };
+
+        var solo_uno = this.users.length - x;
+      if (x == this.users.length) {
+        document.getElementById("mensaje_vacio").style.display = "flex";
+        document.getElementById("ajuste_oculto_fondo").style.display = "flex";
+      } else if (solo_uno == 1) {
+        document.getElementById("mensaje_amigos").style.display = "flex";
+        document.getElementById("ajuste_oculto_fondo").style.display = "flex";
+      } else {
+        document.getElementById("partesuperior").style.opacity = "0";
+        document.getElementById("barra").style.transform = "translateY(-83px)";
+        document.getElementById("atras_vista_uno").style.opacity = "1";
+        document.getElementById("silla2").style.transform = "translateX(-80px)";
+        document.getElementById("silla3").style.transform = "translateX(80px)";
+        document.getElementById("silla1").style.opacity = "0";
+        document.getElementById("silla4").style.opacity = "0";
+        document.getElementById("carta_titulo").style.opacity = "1";
+        document.getElementById("boton_vista_uno").style.opacity = "0";
+        document.getElementById("boton_vista_dos").style.opacity = "1";
+        document.getElementById("boton_vista_dos").style.zIndex = "3";
+        document.getElementById("formulario_usuarios").style.opacity = "0";
+        document.getElementById("formulario_cartas").style.display = "flex";
+        document.getElementById("ajustes").style.display = "none";
+        setTimeout(function(){
+          document.getElementById("formulario_usuarios").style.display = "none";
+          document.getElementById("formulario_cartas").style.opacity = "1";
+        }, 200);
+      }
+      
     }
 
     mas_jugadores() {
@@ -51,15 +67,22 @@ export class HomePage {
       /* document.getElementById("plus").focus(); */
     }
 
-    ajustes(estado) {
-      if (estado == "abrir") {
-        document.getElementById("ajuste_oculto_fondo").style.display = "flex";
-      } else if (estado == "cerrar") {
-        document.getElementById("ajuste_oculto_fondo").style.display = "none";
-      }
-    }
+    /*Muestra ajustes*/
 
-    /* ESTA PARTE ES PARA LA VISTA DOS */
+      ajustes(estado) {
+        if (estado == "abrir") {
+          document.getElementById("ajuste_oculto_fondo").style.display = "flex";
+          document.getElementById("ajuste_oculto").style.display = "flex";
+          
+        } else if (estado == "cerrar") {
+          document.getElementById("ajuste_oculto_fondo").style.display = "none";
+          document.getElementById("ajuste_oculto").style.display = "none";
+          document.getElementById("mensaje_amigos").style.display = "none";
+          document.getElementById("mensaje_vacio").style.display = "none";
+        }
+      }
+
+  /* ESTA PARTE ES PARA LA VISTA DOS */
     cartas: string[];
     h2_posicion: number;
 
