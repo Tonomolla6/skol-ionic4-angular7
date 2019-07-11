@@ -17,7 +17,7 @@ export class HomePage {
       {name:'Jugador 3', value:''}
     ]
     this.cartas = ["Sin Mariconeos", "En pareja", "Piscina y amigos", "Piscina"];
-    this.h2_posicion = 0;
+    this.tema = 0;
   }
   /* ESTA PARTE ES PARA LA VISTA 1 */
     users: object[];
@@ -99,7 +99,7 @@ export class HomePage {
 
   /* ESTA PARTE ES PARA LA VISTA DOS */
     cartas: string[];
-    h2_posicion: number;
+    tema: number;
 
     atras_vista_uno() {
       document.getElementById("partesuperior").style.opacity = "1";
@@ -122,29 +122,33 @@ export class HomePage {
       }, 200);
     }
 
-      posicion_cartas(direccion) {
-        if (direccion == "derecha") {
-          if (this.h2_posicion == this.cartas.length-1) {
-            this.h2_posicion = 0;
-          } else {
-            this.h2_posicion = this.h2_posicion + 1;
-          }
-        } else if (direccion == "izquierda") {
-          if (this.h2_posicion == 0) {
-            this.h2_posicion = this.cartas.length-1;
-          } else {
-            this.h2_posicion = this.h2_posicion - 1;
-          }
-        }
-        document.getElementById("titulo_carta").innerHTML = this.cartas[this.h2_posicion];
-      }
-      info() {
-        if (document.getElementById("info_oculto").style.display == "none" || document.getElementById("info_oculto").style.display == "") {
-          document.getElementById("ajuste_oculto_fondo").style.display = "flex";
-          document.getElementById("info_oculto").style.display = "flex";
+    boton_vista_dos() {
+      localStorage.setItem("t", `${this.tema}`);
+    }
+    
+    posicion_cartas(direccion) {
+      if (direccion == "derecha") {
+        if (this.tema == this.cartas.length - 1) {
+          this.tema = 0;
         } else {
-          document.getElementById("ajuste_oculto_fondo").style.display = "none";
-          document.getElementById("info_oculto").style.display = "none";
+          this.tema = this.tema + 1;
+        }
+      } else if (direccion == "izquierda") {
+        if (this.tema == 0) {
+          this.tema = this.cartas.length - 1;
+        } else {
+          this.tema = this.tema - 1;
         }
       }
+      document.getElementById("titulo_carta").innerHTML = this.cartas[this.tema];
+    }
+    info() {
+      if (document.getElementById("info_oculto").style.display == "none" || document.getElementById("info_oculto").style.display == "") {
+        document.getElementById("ajuste_oculto_fondo").style.display = "flex";
+        document.getElementById("info_oculto").style.display = "flex";
+      } else {
+        document.getElementById("ajuste_oculto_fondo").style.display = "none";
+        document.getElementById("info_oculto").style.display = "none";
+      }
+    }
 }
