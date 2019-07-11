@@ -22,6 +22,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.splashScreen.hide();
       this.statusBar.backgroundColorByHexString('#702829');
+      localStorage.clear();
     });
   }
 }

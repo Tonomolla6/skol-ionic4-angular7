@@ -23,15 +23,16 @@ export class HomePage {
     users: object[];
     
     boton_vista_uno() {
-      var x = 0;
+      var x: number = 0;
+      var solo_uno: number;
+
       //this.router.navigate (['questions'])
       for(let i=0; i<this.users.length; i++) {
         if (this.users[`${i}`].value == "") {
-          var x = x + 1;
+          x = x + 1;
         };
       };
-
-        var solo_uno = this.users.length - x;
+        solo_uno = this.users.length - x;
       if (x == this.users.length) {
         document.getElementById("mensaje_vacio").style.display = "flex";
         document.getElementById("ajuste_oculto_fondo").style.display = "flex";
@@ -39,7 +40,18 @@ export class HomePage {
         document.getElementById("mensaje_amigos").style.display = "flex";
         document.getElementById("ajuste_oculto_fondo").style.display = "flex";
       } else {
-        console.log(this.users);
+
+        /*Guarda la información de los usuarios en el local storage*/
+        var num: number = 0;
+        this.users.forEach(element => {
+          if (element["value"] != "") {
+            num = num + 1;
+            localStorage.setItem(`j${num}`, `${element["value"]}`);
+          }
+        });
+        localStorage.setItem("jn", `${num}`);
+
+        /*Efectos del diseño*/
         document.getElementById("partesuperior").style.opacity = "0";
         document.getElementById("barra").style.transform = "translateY(-83px)";
         document.getElementById("atras_vista_uno").style.opacity = "1";
