@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class HomePage {
-  constructor(public router: Router, public activeRoute:ActivatedRoute) {
+  constructor(public router: Router, /*private file: File,*/ public activeRoute:ActivatedRoute) {
     this.users = [
       {name:'Jugador 1', value:''},
       {name:'Jugador 2', value:''},
@@ -38,6 +39,7 @@ export class HomePage {
         document.getElementById("mensaje_amigos").style.display = "flex";
         document.getElementById("ajuste_oculto_fondo").style.display = "flex";
       } else {
+        console.log(this.users);
         document.getElementById("partesuperior").style.opacity = "0";
         document.getElementById("barra").style.transform = "translateY(-83px)";
         document.getElementById("atras_vista_uno").style.opacity = "1";
@@ -79,6 +81,7 @@ export class HomePage {
           document.getElementById("ajuste_oculto").style.display = "none";
           document.getElementById("mensaje_amigos").style.display = "none";
           document.getElementById("mensaje_vacio").style.display = "none";
+          document.getElementById("info_oculto").style.display = "none";
         }
       }
 
@@ -122,5 +125,14 @@ export class HomePage {
           }
         }
         document.getElementById("titulo_carta").innerHTML = this.cartas[this.h2_posicion];
+      }
+      info() {
+        if (document.getElementById("info_oculto").style.display == "none" || document.getElementById("info_oculto").style.display == "") {
+          document.getElementById("ajuste_oculto_fondo").style.display = "flex";
+          document.getElementById("info_oculto").style.display = "flex";
+        } else {
+          document.getElementById("ajuste_oculto_fondo").style.display = "none";
+          document.getElementById("info_oculto").style.display = "none";
+        }
       }
 }
