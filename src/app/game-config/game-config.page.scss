@@ -1,15 +1,97 @@
-$color: red;
+div.atras {
+    transition: 1s;
+    height: 25px;
+    width: 35px;
+    background-image: url(src\assets\images\flecha_atras.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 16px;
+    margin-top: 13px;
+    position: absolute;
+    z-index: 3;
+}
 
-@mixin my-border($color) {
-  
+div.notas {
+    background-image: url("src/assets/images/notas.png");
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 76vh;
+    margin-top: 15px;
 }
-// @include my-border(green);
-// border: 2px solid blue;
-#mesa1 {
-  fill: #702829;
-  margin-top: 85px;
+
+div.notas div.configuracion_notas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 10% 0px;
 }
-#mesa2 {
-  fill: #702829;
-  margin-top: -7px;
+
+div.notas p{
+    font-size: calc(19 * 40vh / 300);
+    color: black;
+    margin: 5px 3px;
+}
+
+div.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: calc(50vw - 130px);
+}
+
+div.boton h2 {
+    position: absolute;
+    font-size: 21px;
+    transform: translateY(-2px);
+}
+
+div.notas div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div img{
+    margin: 0px 10px;
+    padding: 2px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+div.notas div.configuracion_notas div.efecto_notas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego p{
+    font-size: calc(16 * 40vh / 300);
+}
+
+#todos {
+    border-color: #702829;
+}
+
+@media(max-height:740px) {
+    div.boton h2 {
+        font-size: 17px;
+        transform: translateY(-5px);
+    }
+    div.boton img {
+        max-width: 80%;
+    }
 }

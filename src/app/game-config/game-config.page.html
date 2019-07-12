@@ -1,8 +1,47 @@
 <ion-content color="primary">
-  <svg id="mesa1" width="375" height="20">
-    <rect width="375" height="20" style="stroke-width:6;stroke:rgb(0,0,0)" />
-  </svg>
-  <svg id="mesa2" width="375" height="100">
-    <rect width="375" height="100" style="stroke-width:6;stroke:rgb(0,0,0)" />
-  </svg>
+
+        <!-- div oculto -->
+        <div routerLink="/home" class="atras"></div>
+
+        <div class="notas">
+            <div class="configuracion_notas">
+                <div class="efecto_notas">
+                    <p>DIFICULTAD</p>
+                    <div>
+                        <img id="vaso" (click)="dificultad_change('vaso');" width="40" src="assets/images/vaso_vacio.svg"/>
+                        <img id="jarra" (click)="dificultad_change('jarra');" width="50" src="assets/images/jarra_llena.svg"/>
+                        <img id="cerveza" (click)="dificultad_change('cerveza');" width="70" src="assets/images/cerveza_vacia.svg"/>
+                    </div>
+                </div>
+                <div class="efecto_notas">
+                    <p>TIPOS DE PREGUNTAS</p>
+                    <div>
+                        <div class="imagen_modo_juego">
+                                <img id="grupo" (click)="modo_change('grupo');" height="60" src="assets/images/modo_grupo.svg"/>
+                                <p>GRUPO</p>
+                        </div>
+                        <div class="imagen_modo_juego">
+                                <img id="individual" (click)="modo_change('individual');" height="60" src="assets/images/modo_individual.svg"/>
+                                <p>SOLO</p>
+                        </div>
+                        <div class="imagen_modo_juego">
+                                <img id="todos" (click)="modo_change('todos');" height="60" src="assets/images/modo_todos.svg"/>
+                                <p>TODOS</p>
+                        </div>
+                        
+                        
+                    </div>
+                </div> 
+                <div class="efecto_notas">
+                    <p>NUMERO DE PREGUNTAS</p>
+                </div>
+            </div>  
+        </div>
+
+        <!--Boton -->
+        <div id="boton_vista_dos" (click)="boton_vista_dos()" class="boton" routerLink="/game-config">
+            <img width="260px" src="assets/images/boton_del_juego_3.svg"/>
+            <h2>EMPIEZA LA FIESTA</h2>
+        </div>
+
 </ion-content>
