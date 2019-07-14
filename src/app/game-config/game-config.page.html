@@ -6,34 +6,57 @@
         <div class="notas">
             <div class="configuracion_notas">
                 <div class="efecto_notas">
-                    <p>DIFICULTAD</p>
+                    <p class="titulo_dificultad">DIFICULTAD</p>
                     <div>
-                        <img id="vaso" (click)="dificultad_change('vaso');" width="40" src="assets/images/vaso_vacio.svg"/>
-                        <img id="jarra" (click)="dificultad_change('jarra');" width="50" src="assets/images/jarra_llena.svg"/>
-                        <img id="cerveza" (click)="dificultad_change('cerveza');" width="70" src="assets/images/cerveza_vacia.svg"/>
+                        <div class="imagen_dificultad_juego">
+                                <img id="vaso" (click)="dificultad_change('vaso');" width="40" src="assets/images/vaso_vacio.svg"/>
+                                <p id="vaso_p">FACIL</p>
+                        </div>
+                        <div class="imagen_dificultad_juego">
+                                <img id="jarra" (click)="dificultad_change('jarra');" width="50" src="assets/images/jarra_llena.svg"/>
+                                <p id="jarra_p">NORMAL</p>
+                        </div>
+                        <div class="imagen_dificultad_juego">
+                                <img id="cerveza" (click)="dificultad_change('cerveza');" width="70" src="assets/images/cerveza_vacia.svg"/>
+                                <p id="cerveza_p">DIFICIL</p>
+                        </div>
                     </div>
                 </div>
+                <div class="separador"></div>
                 <div class="efecto_notas">
-                    <p>TIPOS DE PREGUNTAS</p>
+                    <p class="titulo_modo">TIPOS DE PREGUNTAS</p>
                     <div>
                         <div class="imagen_modo_juego">
                                 <img id="grupo" (click)="modo_change('grupo');" height="60" src="assets/images/modo_grupo.svg"/>
-                                <p>GRUPO</p>
+                                <p id="grupo_p">GRUPO</p>
                         </div>
-                        <div class="imagen_modo_juego">
+                        <div class="imagen_modo_juego individual_modo">
                                 <img id="individual" (click)="modo_change('individual');" height="60" src="assets/images/modo_individual.svg"/>
-                                <p>SOLO</p>
+                                <p id="individual_p">INDIVIDUAL</p>
                         </div>
                         <div class="imagen_modo_juego">
                                 <img id="todos" (click)="modo_change('todos');" height="60" src="assets/images/modo_todos.svg"/>
-                                <p>TODOS</p>
+                                <p id="todos_p">TODAS</p>
                         </div>
-                        
-                        
                     </div>
                 </div> 
+                <div class="separador"></div>
                 <div class="efecto_notas">
-                    <p>NUMERO DE PREGUNTAS</p>
+                    <p class="titulo_preguntas">NUMERO DE PREGUNTAS</p>
+                    <div class="preguntas">
+                        <div class="imagen_preguntas_juego">
+                                <img id="diez" (click)="preguntas_change('diez');" height="40" src="assets/images/1_chupito_lleno.svg"/>
+                                <p id="diez_p">10</p>
+                        </div>
+                        <div class="imagen_preguntas_juego">
+                                <img id="veinte" (click)="preguntas_change('veinte');" height="40" src="assets/images/2_chupito_vacio.svg"/>
+                                <p id="veinte_p">20</p>
+                        </div>
+                        <div class="imagen_preguntas_juego">
+                                <img id="treinta" (click)="preguntas_change('treinta');" height="61" src="assets/images/3_chupito_vacio.svg"/>
+                                <p id="treinta_p">30</p>
+                        </div>
+                    </div>
                 </div>
             </div>  
         </div>

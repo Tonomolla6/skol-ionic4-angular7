@@ -17,7 +17,7 @@ div.notas {
     background-position-x: center;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 76vh;
+    height: 78vh;
     margin-top: 15px;
 }
 
@@ -25,10 +25,10 @@ div.notas div.configuracion_notas {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    padding: 10% 0px;
+    padding: 19% 14% 5% 12%;
 }
 
 div.notas p{
@@ -58,7 +58,7 @@ div.notas div {
     align-items: flex-end;
 }
 
-div.notas div.configuracion_notas div.efecto_notas div img{
+div.notas div.configuracion_notas div.efecto_notas img{
     margin: 0px 10px;
     padding: 2px;
     border: 2px solid white;
@@ -70,7 +70,22 @@ div.notas div.configuracion_notas div.efecto_notas {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10px 0px;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_dificultad_juego {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0px 10px;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_dificultad_juego p{
+    font-size: calc(16 * 40vh / 300);
+    color: rgba(0, 0, 0, 0.62);
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_dificultad_juego img{
+    margin: 0px 5px;
 }
 
 div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego {
@@ -78,12 +93,63 @@ div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego {
     flex-direction: column;
     align-items: center;
 }
+
 div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego p{
     font-size: calc(16 * 40vh / 300);
+    color: rgba(0, 0, 0, 0.62);
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego img{
+    margin: 0px 5px;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.individual_modo {
+    margin-left: 10px;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_preguntas_juego {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.imagen_preguntas_juego p{
+    font-size: calc(16 * 40vh / 300);
+    color: rgba(0, 0, 0, 0.62);
+}
+
+div.notas div.configuracion_notas div.efecto_notas div.preguntas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.separador {
+    width: 90%;
+    height: 1px;
+    background-color: black;
 }
 
 #todos {
     border-color: #702829;
+}
+#todos_p {
+    color:black;
+}
+#jarra_p {
+    color:black;
+}
+#diez_p {
+    color:black;
+}
+div.notas p.titulo_modo {
+    margin-bottom: 15px;
+}
+div.notas p.titulo_dificultad {
+    margin-bottom: 0px;
+}
+div.notas p.titulo_preguntas {
+    margin-bottom: 5px;
 }
 
 @media(max-height:740px) {
