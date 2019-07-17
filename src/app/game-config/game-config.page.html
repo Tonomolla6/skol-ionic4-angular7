@@ -1,9 +1,9 @@
 <ion-content color="primary">
 
         <!-- div oculto -->
-        <div routerLink="/home" class="atras"></div>
+        <div id="atras" (click)="atras();" class="atras"></div>
 
-        <div class="notas">
+        <div id="notas" class="notas">
             <div class="configuracion_notas">
                 <div class="efecto_notas">
                     <p class="titulo_dificultad">DIFICULTAD</p>
@@ -62,9 +62,12 @@
         </div>
 
         <!--Boton -->
-        <div id="boton_vista_dos" (click)="boton_vista_dos()" class="boton" routerLink="/game-config">
-            <img width="260px" src="assets/images/boton_del_juego_3.svg"/>
-            <h2>EMPIEZA LA FIESTA</h2>
+        <div id="boton_vista_tres" (click)="empieza_el_juego()" class="boton">
+            <img id="boton_vista_tres_img" width="260px" src="assets/images/boton_del_juego_3.svg"/>
+            <h2 id="titulo_boton">EMPIEZA LA FIESTA</h2>
         </div>
 
+        <!--Palo y cubo-->
+        <img id="palo" src="assets/images/palo.jpg"/>
+        <div id="cubo"></div>
 </ion-content>

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { File } from '@ionic-native/file/ngx';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 
 @Component({
   selector: 'app-home',
@@ -18,6 +20,7 @@ export class HomePage {
     ]
     this.cartas = ["Sin Mariconeos", "En pareja", "Piscina y amigos", "Piscina"];
     this.tema = 0;
+
   }
   /* ESTA PARTE ES PARA LA VISTA 1 */
     users: object[];
@@ -150,5 +153,8 @@ export class HomePage {
         document.getElementById("ajuste_oculto_fondo").style.display = "none";
         document.getElementById("info_oculto").style.display = "none";
       }
+    }
+    siguente() {
+      this.router.navigateByUrl('/game-config');
     }
 }

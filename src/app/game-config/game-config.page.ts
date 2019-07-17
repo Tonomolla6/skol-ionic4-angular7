@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-game-config',
@@ -7,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameConfigPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { 
+
+  }
 
   ngOnInit() {
+      
   }
 
   dificultad: number = 2;
   dificultad_change(nivel) {
+    
     if (nivel == "vaso") {
       document.getElementById("vaso").setAttribute('src', 'assets/images/vaso_lleno.svg');
       document.getElementById("jarra").setAttribute('src', 'assets/images/jarra_vacia.svg');
@@ -80,7 +86,7 @@ export class GameConfigPage implements OnInit {
       document.getElementById("diez").setAttribute('src', 'assets/images/1_chupito_lleno.svg');
       document.getElementById("veinte").setAttribute('src', 'assets/images/2_chupito_vacio.svg');
       document.getElementById("treinta").setAttribute('src', 'assets/images/3_chupito_vacio.svg');
-      this.preguntas = 1;
+      this.preguntas = 10;
       document.getElementById("diez_p").style.color = "black";
       document.getElementById("veinte_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("treinta_p").style.color = "rgba(0, 0, 0, 0.62)";
@@ -89,7 +95,7 @@ export class GameConfigPage implements OnInit {
       document.getElementById("diez").setAttribute('src', 'assets/images/1_chupito_vacio.svg');
       document.getElementById("veinte").setAttribute('src', 'assets/images/2_chupito_lleno.svg');
       document.getElementById("treinta").setAttribute('src', 'assets/images/3_chupito_vacio.svg');
-      this.preguntas = 2;
+      this.preguntas = 20;
       document.getElementById("diez_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("veinte_p").style.color = "black";
       document.getElementById("treinta_p").style.color = "rgba(0, 0, 0, 0.62)";
@@ -98,11 +104,46 @@ export class GameConfigPage implements OnInit {
       document.getElementById("diez").setAttribute('src', 'assets/images/1_chupito_vacio.svg');
       document.getElementById("veinte").setAttribute('src', 'assets/images/2_chupito_vacio.svg');
       document.getElementById("treinta").setAttribute('src', 'assets/images/3_chupito_lleno.svg');
-      this.preguntas = 3;
+      this.preguntas = 30;
       document.getElementById("diez_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("veinte_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("treinta_p").style.color = "black";
 
     }
   }
+  
+  empieza_el_juego() {
+    /*Guardamos la información en el LocalStorage*/
+    
+
+    /*Se borran las notas y el atrás*/
+    document.getElementById("notas").style.opacity = "0";
+    document.getElementById("atras").style.opacity = "0";
+
+    /*Susituye el titulo del boton*/
+    document.getElementById("titulo_boton").innerHTML = "PREPARANDO...";
+    
+    document.getElementById("boton_vista_tres").style.transform = "translateY(-40vh)";
+    document.getElementById("palo").style.height = "45.3vh";
+    setTimeout(function(){
+      setTimeout(function(){
+        document.getElementById("boton_vista_tres_img").setAttribute('src', 'assets/images/boton_del_juego_1.svg');
+        document.getElementById("titulo_boton").innerHTML = "LISTO!!!";
+      }, 500);
+    }, 2000);
+
+    setTimeout(function(){
+      document.getElementById("cubo").style.top = "0";
+    }, 2700);
+
+    var miguel = this;
+    setTimeout(function(){
+      miguel.router.navigateByUrl('/questions')
+    }, 4500);
+
+  }
+  atras() {
+    this.router.navigateByUrl('/home');
+  }
+  
 }
