@@ -1,3 +1,22 @@
 <ion-content color="secondary">
 
+    <div (click)='salir("mensaje");' class="salir"></div>
+
+    <div id="contador_preguntas" class="contador_preguntas">0/0</div>
+
+    <div class="preguntas">
+        <p id="preguntas_titulo">Modo de juego</p>
+        <p id="preguntas_texto">Pregunta super larga que quiero poner de ejemplo para ver como queda</p>
+    </div>
+
+    <div id="fondo_negro" class="fondo_negro">
+        <div class="alerta_salir">
+            <p>¿Estás seguro?   Perderás el progreso de la partida.</p>
+            <div class="botones">
+                <div (click)='salir("aceptar");' class="cancelar">Salir</div>
+                <div (click)='salir("cancelar");' class="aceptar">Continuar</div>
+            </div>
+        </div>
+    </div>
+
 </ion-content>

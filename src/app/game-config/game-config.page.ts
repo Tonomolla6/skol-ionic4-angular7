@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-game-config',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class GameConfigPage implements OnInit {
 
-  constructor(public router: Router) { 
+  constructor(public router: Router, private statusBar: StatusBar) { 
 
   }
 
@@ -113,8 +113,10 @@ export class GameConfigPage implements OnInit {
   }
   
   empieza_el_juego() {
+    this.statusBar.backgroundColorByHexString('#471717');
+
     /*Guardamos la información en el LocalStorage*/
-    
+    localStorage.setItem("pn", `${this.preguntas}`);
 
     /*Se borran las notas y el atrás*/
     document.getElementById("notas").style.opacity = "0";

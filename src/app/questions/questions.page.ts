@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-questions',
@@ -7,27 +9,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./questions.page.scss'],
 })
 export class QuestionsPage implements OnInit {
-  //users: object[];
-  constructor( public activeRoute:ActivatedRoute) { 
-    //let users = localStorage.getItem('usuarios');
-    //let randomNumber = 2;
-    //let user = users[randomNumber];
-  }
-  random;
+  preguntas_totales = localStorage.getItem("pn");
 
-  randomNumber = 2;
-  users = localStorage.getItem('usuarios');
-  //user = users[randomNumber];
-  user21 = this.activeRoute.snapshot.paramMap.get('user1');
-  user2 = this.activeRoute.snapshot.paramMap.get('user2');
-  user3 = this.activeRoute.snapshot.paramMap.get('user3');
+  constructor( public activeRoute:ActivatedRoute , private statusBar: StatusBar, public router: Router) { 
+  }
 
   ngOnInit() {
-    
-    // let user1 = this.activeRoute.snapshot.paramMap.get('user')
-    // console.log(user1)
+    document.getElementById("contador_preguntas").innerHTML = `1/${this.preguntas_totales}`;
   }
-  genRandom(){
-    //this.random = Math.floor((Math.random() * 100) + 1);
-  };
+
+  salir(estado) {
+    if (estado == "mensaje") {
+      document.getElementById("fondo_negro").style.display = "flex";
+    } else if (estado == "cancelar") {
+      document.getElementById("fondo_negro").style.display = "none";
+    } else if (estado == "aceptar") {
+      document.getElementById("fondo_negro").style.display = "none";
+      this.statusBar.backgroundColorByHexString('#702829');
+      this.router.navigateByUrl('/home');
+    }
+  }
+
 }
