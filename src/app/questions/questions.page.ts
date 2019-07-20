@@ -20,10 +20,12 @@ export class QuestionsPage implements OnInit {
 
   salir(estado) {
     if (estado == "mensaje") {
+      this.statusBar.backgroundColorByHexString('#351111');
       document.getElementById("fondo_negro").style.display = "flex";
-    } else if (estado == "cancelar") {
+    } else if (estado == "continuar") {
+      this.statusBar.backgroundColorByHexString('#471717');
       document.getElementById("fondo_negro").style.display = "none";
-    } else if (estado == "aceptar") {
+    } else if (estado == "salir") {
       document.getElementById("fondo_negro").style.display = "none";
       this.statusBar.backgroundColorByHexString('#702829');
       this.router.navigateByUrl('/home');
