@@ -1,17 +1,102 @@
 {
-    "array": [
-      1,
-      2,
-      3
-    ],
-    "boolean": true,
-    "color": "#82b92c",
-    "null": null,
-    "number": 123,
-    "object": {
-      "a": "b",
-      "c": "d",
-      "e": "f"
-    },
-    "string": "Hello World"
-  }
+  "temas": [
+    [
+      "Amigos y una fiesta pendiente",
+      "Este tema está creado especialmente para un grupo de amigos sin ninguna clase de interés sexual ni sentimental, és para pasarlo bien con el alchol y estar listos para la fiesta!!",
+      [
+        [
+          "none",
+          "$user1 bébete la mitad del vaso de $user2."
+        ],
+        [
+          "none",
+          "Si alguno de los presentes es zurdo bebe $x tragos."
+        ],
+        [
+          "none",
+          "$user1 y $user2 juego de piedra,papel y tijeras quien pierda bebe $x tragos."
+        ],
+        [
+          "none",
+          "Si alguien aún no ha bebido que se termina su copa."
+        ],
+        [
+          "none",
+          "Necesitamos a un payaso, $user1 te ha tocado,cuenta un chiste, en el caso de que alguien se ría bebe $x tragos y si por lo contrario nadie se rie bebes $x trago de cada copa"
+        ],
+        [
+          "none",
+          "Actores porno, quien no conozca ninguno toma $x tragos,empieza $user1"
+        ],
+        [
+          "none",
+          "$user1 dale tantos tragos a $user2 como polvos hayas echado este año,si el resultado es 0, eres un pringao."
+        ],
+        [
+          "none",
+          "El que tenga novia bebe $x ,es vuestro momento solteros que se jodan."
+        ],
+        [
+          "none",
+          "Vamos a jugar a el famoso juego \"la pinza\" pero de otra forma. El que diga \"si\" o \"no\" tendrá que beber 2 tragos hasta que termine la partida."
+        ],
+        [
+          "none",
+          "El narrador bebe $x tragos. "
+        ],
+        [
+          "none",
+          "El más bajito del grupo bebe $x tragos y el más alto el doble."
+        ],
+        [
+          "none",
+          "Solteros os toca pillar,beber $x si no teneis ningun lio cerca."
+        ],
+        [
+          "none",
+          "Si alguien tiene algo en la mano bebe $x tragos."
+        ],
+        [
+          "none",
+          "Si alguien usa gafas reparte $x tragos."
+        ],
+        [
+          "none",
+          "En el caso de que se encuentre un virgen en la sala , todos beben $x tragos."
+        ],
+        [
+          "none",
+          "$user1 reparte $x tragos al jugador más borracho de todos, si eres tú , acábate la copa campeón. "
+        ],
+        [
+          "none",
+          "Si alguna vez has tenido sueños eróticos con la madre de alguien de la sala bebe $x tragos."
+        ],
+        [
+          "none",
+          "$user1, reparte $x tragos a la persona que consideres más fea, en el caso de que seas tu, llora."
+        ],
+        [
+          "none",
+          "$user1, tienes 15 segundos para acabar la copa, sino los consigues dale un beso negro a $user2, si no sabes que es busca en google."
+        ],
+        [
+          "none",
+          "Los jugadores que tenga una “A” en el nombre que beban $x tragos, en caso contrario, $user1 acábate la copa."
+        ],
+        [
+          "none",
+          "Quien lleve lentillas bebe $x tragos que hay que hidratarse."
+        ],
+        [
+          "none",
+          "En el caso de ser rubio/a bebe $x tragos."
+        ],
+        [
+          "none",
+          "Los usuarios de apple se acaban la copa, no queríais iphone pues ale."
+        ]
+      ]
+    ]
+  ]
+}

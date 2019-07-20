@@ -39,15 +39,15 @@
     </div>
   
     <div id="formulario_cartas" class="formulario_cartas">
-      <img (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
-      <div>
+      <img class="img2" (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
+      <div class="disenyo_cartas">
         <div id="carta" class="carta">
           <img (click)="info()" src="assets/images/info.svg"/>
           <div class="carta_fondo"></div>
         </div>
         <h2 id="titulo_carta" class="titulo_carta">{{cartas[0]}}</h2>
       </div>
-      <img (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
+      <img class="img1" (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
     </div>
   
 
@@ -85,7 +85,7 @@
 
     <div id="info_oculto" class="info_oculto">
       <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
-      <p>Texto de prueba.</p>  
+      <p id="descripcion">{{descripcion[0]}}</p>  
     </div>
   </div>
 

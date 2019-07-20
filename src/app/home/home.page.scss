@@ -127,10 +127,30 @@ div.formulario_cartas {
     display: none;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 div.formulario_cartas img {
     width: 25px;
+}
+
+div.formulario_cartas .img1 {
+    position: absolute;
+    right:0;
+    margin-right: 10px;
+}
+
+div.formulario_cartas .img2 {
+    position: absolute;
+    left:0;
+    margin-left: 10px;
+}
+
+div.formulario_cartas div.disenyo_cartas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 div.formulario_cartas div.carta {
@@ -155,12 +175,14 @@ div.formulario_cartas div.carta div.carta_fondo {
     height: 200px;
     background-color: black;
 }
+
 div.formulario_cartas h2 {
     font-family: 'Oraqle Script';
     font-size: 55px;
     text-align: center;
     margin-top: 5px;
 }
+
 div.boton {
     display: flex;
     justify-content: center;

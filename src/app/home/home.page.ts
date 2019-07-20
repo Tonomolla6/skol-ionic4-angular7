@@ -18,10 +18,19 @@ export class HomePage {
       {name:'Jugador 2', value:''},
       {name:'Jugador 3', value:''}
     ]
-    this.cartas = ["Sin Mariconeos", "En pareja", "Piscina y amigos", "Piscina"];
+    
     this.tema = 0;
 
+    /*Asignamos los nombres de los temas y su descripción*/
+    this.cartas = ["0"];
+    this.descripcion = ["0"];
+    this.numero_de_cartas = parseInt(localStorage.getItem("tn"));
+    for (let index = 0; index < this.numero_de_cartas ; index++) {
+      this.cartas[index] = localStorage.getItem(`t${index}`);
+      this.descripcion[index] = localStorage.getItem(`t${index}d`);
+    }
   }
+
   /* ESTA PARTE ES PARA LA VISTA 1 */
     users: object[];
     
@@ -103,6 +112,8 @@ export class HomePage {
   /* ESTA PARTE ES PARA LA VISTA DOS */
     cartas: string[];
     tema: number;
+    numero_de_cartas: number;
+    descripcion: string[];
 
     atras_vista_uno() {
       document.getElementById("partesuperior").style.opacity = "1";
@@ -143,8 +154,11 @@ export class HomePage {
           this.tema = this.tema - 1;
         }
       }
+      /*Imprime los datos*/
       document.getElementById("titulo_carta").innerHTML = this.cartas[this.tema];
+      document.getElementById("descripcion").innerHTML = this.descripcion[this.tema];
     }
+
     info() {
       if (document.getElementById("info_oculto").style.display == "none" || document.getElementById("info_oculto").style.display == "") {
         document.getElementById("ajuste_oculto_fondo").style.display = "flex";

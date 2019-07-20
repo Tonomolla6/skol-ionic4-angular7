@@ -11,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class QuestionsPage implements OnInit {
   preguntas_totales = localStorage.getItem("pn");
 
-  constructor( public activeRoute:ActivatedRoute , private statusBar: StatusBar, public router: Router) { 
+  constructor( public activeRoute: ActivatedRoute , private statusBar: StatusBar, public router: Router) {
   }
 
   ngOnInit() {
@@ -31,5 +31,7 @@ export class QuestionsPage implements OnInit {
       this.router.navigateByUrl('/home');
     }
   }
+
+
 
 }
