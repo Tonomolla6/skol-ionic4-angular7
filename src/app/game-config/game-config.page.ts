@@ -51,13 +51,13 @@ export class GameConfigPage implements OnInit {
 
     }
   }
-  modo: number = 0;
+  modo: string = "0";
   modo_change(modo_clase) {
     if (modo_clase == "grupo") {
       document.getElementById("grupo").style.borderColor = "#702829";
       document.getElementById("individual").style.borderColor = "white";
       document.getElementById("todos").style.borderColor = "white";
-      this.modo = 2;
+      this.modo = "2";
       document.getElementById("grupo_p").style.color = "black";
       document.getElementById("individual_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("todos_p").style.color = "rgba(0, 0, 0, 0.62)";
@@ -66,7 +66,7 @@ export class GameConfigPage implements OnInit {
       document.getElementById("grupo").style.borderColor = "white";
       document.getElementById("individual").style.borderColor = "#702829";
       document.getElementById("todos").style.borderColor = "white";
-      this.modo = 3;
+      this.modo = "3";
       document.getElementById("grupo_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("individual_p").style.color = "black";
       document.getElementById("todos_p").style.color = "rgba(0, 0, 0, 0.62)";
@@ -75,7 +75,7 @@ export class GameConfigPage implements OnInit {
       document.getElementById("grupo").style.borderColor = "white";
       document.getElementById("individual").style.borderColor = "white";
       document.getElementById("todos").style.borderColor = "#702829";
-      this.modo = 0;
+      this.modo = "0";
       document.getElementById("grupo_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("individual_p").style.color = "rgba(0, 0, 0, 0.62)";
       document.getElementById("todos_p").style.color = "black";
@@ -131,48 +131,65 @@ export class GameConfigPage implements OnInit {
     /*Configuramos y preparamos las preguntas para questions*/
     var json_importado =  localStorage.getItem("tg");
     var temas = JSON.parse(json_importado);
-    var tema = localStorage.getItem("t");
+    var tema: string = localStorage.getItem("t");
 
     console.log(tema);
-    if (this.modo == 0) {
+    if (this.modo == "0") {
       var numero_de_preguntas_i: number = temas["temas"][tema]["3"].length;
       var numero_de_preguntas_g: number = temas["temas"][tema]["2"].length;
-      var numero_de_preguntas: number = numero_de_preguntas_g + numero_de_preguntas_i;
     } else {
-      var numero_de_preguntas: number = temas["temas"][tema][this.modo].length;
+      var numero_de_preguntas: number = temas["temas"][tema][this.modo].length -1;
     }
     
     console.log(numero_de_preguntas);
-    var repetidos: number[] = new Array();
-    var aleatorio: number;
+    var repetidos: string[] = new Array();
+    var aleatorio: string;
     var salida: number;
     
     for (let index = 0; index < this.preguntas; index++) {
       let i: number = 0;
       while (i < 1) {
-        salida = 0;
-        aleatorio = Math.round(Math.random()*numero_de_preguntas);
-        console.log(aleatorio);
-        for (let vari = 0; vari < repetidos.length; vari++) {
-          console.log(repetidos);
-          if (repetidos[vari] == aleatorio) {
-            break;
-          } else {
-            salida = salida + 1;
+        if (this.modo == "0") {
+          var modo_multiple: string = `${Math.round(Math.random()* (3 - 2) + 2)}`;
+          var numero_de_preguntas: number = temas["temas"][tema][modo_multiple].length -1;
+
+          salida = 0;
+          aleatorio = `${Math.round(Math.random()*numero_de_preguntas)}`;
+          console.log(aleatorio);
+          for (let vari = 0; vari < repetidos.length; vari++) {
+            console.log(repetidos);
+            if (repetidos[vari] == aleatorio) {
+              break;
+            } else {
+              salida = salida + 1;
+            }
+          }
+
+        } else {
+          salida = 0;
+          aleatorio = `${Math.round(Math.random()*numero_de_preguntas)}`;
+          console.log(aleatorio);
+          for (let vari = 0; vari < repetidos.length; vari++) {
+            console.log(repetidos);
+            if (repetidos[vari] == aleatorio) {
+              break;
+            } else {
+              salida = salida + 1;
+            }
           }
         }
 
         if (salida == repetidos.length) {
-          if (this.modo == 0) {
-            var modo_multiple: number = Math.round(Math.random()* (3 - 2) + 2);
-            console.log(modo_multiple);
-            localStorage.setItem(`p${index}m`, `${temas["temas"][tema][modo_multiple][aleatorio]["0"]}`);
-            localStorage.setItem(`p${index}p`, `${temas["temas"][tema][modo_multiple][aleatorio]["1"]}`);
+          if (this.modo == "0") {
+            localStorage.setItem(`p${index}m`, `${temas["temas"][tema][modo_multiple][aleatorio.toString()]["0"]}`);
+            localStorage.setItem(`p${index}p`, `${temas["temas"][tema][modo_multiple][aleatorio.toString()]["1"]}`);
+            repetidos[repetidos.length]=aleatorio.concat(modo_multiple);
           } else {
-            localStorage.setItem(`p${index}m`, `${temas["temas"][tema][this.modo][aleatorio]["0"]}`);
-            localStorage.setItem(`p${index}p`, `${temas["temas"][tema][this.modo][aleatorio]["1"]}`);
+            localStorage.setItem(`p${index}m`, `${temas["temas"][tema][this.modo][aleatorio.toString()]["0"]}`);
+            localStorage.setItem(`p${index}p`, `${temas["temas"][tema][this.modo][aleatorio.toString()]["1"]}`);
+            repetidos[repetidos.length]=aleatorio;
           }
-          repetidos[repetidos.length]=aleatorio;
+          
           i = 2;
         }
       }

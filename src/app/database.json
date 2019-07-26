@@ -1,7 +1,7 @@
 {
   "temas": [
     [
-      "Amigos y una fiesta pendiente",
+      "Una fiesta pendiente",
       "Este tema está creado especialmente para un grupo de amigos sin ninguna clase de interés sexual ni sentimental, és para pasarlo bien con el alchol y estar listos para la fiesta!!",
       [
         [
@@ -66,7 +66,11 @@
         ],
         [
           "none",
-          "$user1 reparte $x tragos al jugador más borracho de todos, si eres tú , acábate la copa campeón. "
+          "@user1 reparte tantos tragos como personas participen en el juego."
+        ],
+        [
+          "none",
+          "@user1 reparte $x tragos al jugador más borracho de todos, si eres tú , acábate la copa campeón. "
         ],
         [
           "none",
@@ -74,7 +78,7 @@
         ],
         [
           "none",
-          "$user1, reparte $x tragos a la persona que consideres más fea, en el caso de que seas tu, llora."
+          "@user1, reparte $x tragos a la persona que consideres más fea, en el caso de que seas tu, llora."
         ],
         [
           "none",
@@ -95,6 +99,44 @@
         [
           "none",
           "Los usuarios de apple se acaban la copa, no queríais iphone pues ale."
+        ]
+      ],
+      [
+        [
+          "none",
+          "$user1, bebe tantos tragos como novias te hayan dejado."
+        ],
+        [
+          "none",
+          "$user1, si estás maquillado/a, reparte $x tragos, si no, bébete $x tragos."
+        ],
+        [
+          "none",
+          "$user1 , si alguna vez has llamado a tu pareja por el nombre de tu ex acábate la copa aplana-calles."
+        ],
+        [
+          "none",
+          "$user1, si alguna vez has buscado tu móvil y lo tenias en la mano, bebe $x tragos."
+        ],
+        [
+          "none",
+          "$user1, bebe tantos tragos como la última cifra de tu edad."
+        ],
+        [
+          "Feminismo",
+          "$user1 si eres mujeres bebe $x tragos, si no lo eres, repartelos."
+        ],
+        [
+          "Feminismo",
+          "$user1 si eres hombre bebe $x tragos, si no lo eres, repartelos."
+        ],
+        [
+          "none",
+          "$user1, bebe tantos tragos como la última cifra de tu edad."
+        ],
+        [
+          "none",
+          "$user1, bebe tantos tragos como la última cifra de tu edad."
         ]
       ]
     ]
