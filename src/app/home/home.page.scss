@@ -336,7 +336,6 @@ div.info_oculto p {
         width: 40px;
     }
     div.formulario_cartas {
-        height: 100%;
         max-height: calc(100vh - 390px);
     }
 }
@@ -382,6 +381,22 @@ div.info_oculto p {
     }
     div.formulario_usuarios #lista_usuarios ion-input {
         font-size: 14.5px;
+    }
+    div.formulario_cartas {
+        max-height: calc(100vh - 320px);
+    }
+    div.atras {
+        margin-left: 12px;
+        margin-top: 7px;
+    }
+    div.barra div.barra_top_img h2 {
+        margin-top: 32px;
+    }
+    div.barra div.barra_top_img {
+        border: 3px solid black;
+    }
+    div.barra div.barra_top2_img {
+        border-bottom: 2.5px solid black !important;
     }
 }
 @media(max-height:570px) {
