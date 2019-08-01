@@ -129,6 +129,7 @@ div.separador {
     width: 90%;
     height: 1px;
     background-color: black;
+    max-width: 350px;
 }
 
 #todos {
@@ -183,5 +184,58 @@ div.notas p.titulo_preguntas {
     }
     div.boton img {
         max-width: 80%;
+    }
+}
+
+@media(max-height:666px) {
+    div.notas {
+        height: 80vh;
+    }
+    div.boton img {
+        max-width: 70%;
+    }
+    #palo {
+        height: 33px;
+        width: 21px;
+    }
+    div.boton h2 {
+        font-size: 15px;
+        -webkit-transform: translateY(-7px);
+        transform: translateY(-7px);
+    }
+}
+
+@media(max-height:570px) {
+    div.atras {
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+    div.notas {
+        margin-top: -4px;
+        height: 84vh;
+    }
+    div.boton img {
+        max-width: 60%;
+    }
+    div.boton h2 {
+        font-size: 13px;
+        -webkit-transform: translateY(8px);
+        transform: translateY(-8px);
+    }
+    div.notas div.configuracion_notas div.efecto_notas div.imagen_dificultad_juego p {
+        font-size: 14PX;
+        color: rgba(0, 0, 0, 0.62);
+    }
+    div.notas div.configuracion_notas div.efecto_notas div.imagen_modo_juego p {
+        font-size: 14PX;
+        color: rgba(0, 0, 0, 0.62);
+    }
+    div.notas div.configuracion_notas div.efecto_notas div.imagen_preguntas_juego p {
+        font-size: 14PX;
+        color: rgba(0, 0, 0, 0.62);
+    }
+    #palo {
+        height: 28px;
+        width: 19px;
     }
 }

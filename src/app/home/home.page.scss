@@ -447,4 +447,19 @@ div.info_oculto p {
         font-size: 13px;
         transform: translateY(-9px);
     }
+    div.formulario_cartas div.carta {
+        width: 217px;
+        height: 200px;
+    }
+    div.formulario_cartas div.carta div.carta_fondo {
+        width: 185px;
+        height: 170px;
+    }
+    div.formulario_cartas h2 {
+        font-size: 45px;
+    }
+    div.atras {
+        margin-left: 35px;
+        margin-top: 7px;
+    }
 }
