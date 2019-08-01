@@ -313,7 +313,7 @@ div.info_oculto p {
 
 @media(max-width:320px) {
     div.partesuperior h1 {
-        font-size: 50px;
+        font-size: 58px;
     }
 }
 
@@ -338,5 +338,98 @@ div.info_oculto p {
     div.formulario_cartas {
         height: 100%;
         max-height: calc(100vh - 390px);
+    }
+}
+@media(max-height:680px) {
+    div.partesuperior {
+        height: 100px;
+    }
+    div.formulario_usuarios #lista_usuarios ion-input {
+        font-size: 15px;
+    }
+}
+
+@media(max-height:666px) {
+    div.partesuperior {
+        height: 90px;
+    }
+
+    div.barra div.barra_top_img {
+        height: 110px;
+    }
+    div.barra div.sillas .silla {
+        width: 35px;
+    }
+    div.formulario_usuarios h3 {
+        font-size: 15px;
+        margin-top: 27px;
+    }
+    div.boton img {
+        max-width: 70%;
+    }
+    div.boton h2 {
+        font-size: 15px;
+        transform: translateY(-7px);
+    }
+    div.formulario_usuarios {
+        max-height: calc(100vh - 425px);
+    }
+    .plus {
+        width: 21px
+    }
+    img.ajustes{
+        width: 23px;
+    }
+    div.formulario_usuarios #lista_usuarios ion-input {
+        font-size: 14.5px;
+    }
+}
+@media(max-height:570px) {
+    div.partesuperior {
+        height: 75px;
+    }
+    div.partesuperior .botellasinicio {
+        width: 85px;
+    }
+    div.partesuperior h1 {
+        font-size: 51px;
+        line-height: 39px;
+    }
+    div.barra div.barra_top2_img {
+        height: 15.5px;
+        border-bottom: 1.5px solid black !important;
+    }
+    div.barra div.barra_top_img {
+        height: 110px;
+    }
+    div.barra div.barra_top_img {
+        border: 2px solid black;
+    }
+    div.barra div.sillas .silla {
+        width: 32px;
+    }
+    div.formulario_usuarios h3 {
+        margin-top: 20px;
+    }
+    div.formulario_usuarios {
+        max-height: calc(100vh - 393px);
+    }
+    div.formulario_usuarios #lista_usuarios ion-input {
+        font-size: 12px;
+        width: 130px;
+    }
+    .plus {
+        width: 19px;
+        margin-left: 13px;
+    }
+    img.ajustes{
+        width: 21px;
+    }
+    div.boton img {
+        max-width: 60%;
+    }
+    div.boton h2 {
+        font-size: 13px;
+        transform: translateY(-9px);
     }
 }
