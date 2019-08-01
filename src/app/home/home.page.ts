@@ -57,11 +57,11 @@ export class HomePage {
         var num: number = 0;
         this.users.forEach(element => {
           if (element["value"] != "") {
-            num = num + 1;
             localStorage.setItem(`j${num}`, `${element["value"]}`);
+            num = num + 1;
           }
         });
-        localStorage.setItem("jn", `${num}`);
+        localStorage.setItem("jn", `${num -1}`);
 
         /*Efectos del diseño*/
         document.getElementById("partesuperior").style.opacity = "0";

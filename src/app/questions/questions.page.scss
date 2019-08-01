@@ -32,6 +32,7 @@ div.preguntas {
     align-items: center;
     flex-direction: column;
     padding: 50px 20px 40px 20px;
+    z-index: 1;
 }
 
 div.preguntas #preguntas_titulo {

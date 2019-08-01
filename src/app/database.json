@@ -6,63 +6,59 @@
       [
         [
           "none",
-          "$user1 bébete la mitad del vaso de $user2."
+          "@user1 bébete la mitad del vaso de @user2."
         ],
         [
           "none",
-          "Si alguno de los presentes es zurdo bebe $x tragos."
-        ],
-        [
-          "none",
-          "$user1 y $user2 juego de piedra,papel y tijeras quien pierda bebe $x tragos."
+          "Si alguno de los presentes es zurdo bebe @x tragos."
         ],
         [
           "none",
           "Si alguien aún no ha bebido que se termina su copa."
         ],
         [
-          "none",
-          "Necesitamos a un payaso, $user1 te ha tocado,cuenta un chiste, en el caso de que alguien se ría bebe $x tragos y si por lo contrario nadie se rie bebes $x trago de cada copa"
+          "Juegos",
+          "Necesitamos a un payaso, @user1 te ha tocado, cuenta un chiste, en el caso de que alguien se ría bebe @x tragos y si por lo contrario nadie se ríe bebes @y trago de cada copa."
+        ],
+        [
+          "Juegos",
+          "Actores porno, quien no conozca ninguno bebe @x tragos, empieza @user1."
         ],
         [
           "none",
-          "Actores porno, quien no conozca ninguno toma $x tragos,empieza $user1"
+          "@user1 dale tantos tragos a @user2 como polvos hayas echado este año, si el resultado es 0, eres un pringao y bebe $x tragos. "
         ],
         [
           "none",
-          "$user1 dale tantos tragos a $user2 como polvos hayas echado este año,si el resultado es 0, eres un pringao."
+          "El que tenga novia bebe @x ,es vuestro momento solteros, que se jodan."
         ],
         [
           "none",
-          "El que tenga novia bebe $x ,es vuestro momento solteros que se jodan."
+          "El narrador bebe @x tragos."
         ],
         [
           "none",
-          "Vamos a jugar a el famoso juego \"la pinza\" pero de otra forma. El que diga \"si\" o \"no\" tendrá que beber 2 tragos hasta que termine la partida."
+          "El más bajito del grupo bebe @x tragos, el más alto el doble jeje."
         ],
         [
           "none",
-          "El narrador bebe $x tragos. "
+          "Solteros os toca pillar,beber @x si no teneis ningun lio cerca."
         ],
         [
           "none",
-          "El más bajito del grupo bebe $x tragos y el más alto el doble."
+          "Solteros os toca pillar, bebed @x tragos si no teneis ningun lio cerca."
         ],
         [
           "none",
-          "Solteros os toca pillar,beber $x si no teneis ningun lio cerca."
+          "Si alguien tiene algo en la mano bebe @x tragos."
         ],
         [
           "none",
-          "Si alguien tiene algo en la mano bebe $x tragos."
+          "Si alguien usa gafas reparte @x tragos."
         ],
         [
           "none",
-          "Si alguien usa gafas reparte $x tragos."
-        ],
-        [
-          "none",
-          "En el caso de que se encuentre un virgen en la sala , todos beben $x tragos."
+          "En el caso de que se encuentre un virgen en la sala , todos beben @x tragos."
         ],
         [
           "none",
@@ -70,75 +66,371 @@
         ],
         [
           "none",
-          "@user1 reparte $x tragos al jugador más borracho de todos, si eres tú , acábate la copa campeón. "
+          "@user1 reparte @x tragos al jugador más borracho de todos, si eres tú, acábate la copa campeón. "
         ],
         [
           "none",
-          "Si alguna vez has tenido sueños eróticos con la madre de alguien de la sala bebe $x tragos."
+          "Si alguna vez has tenido sueños eróticos con la madre de alguien de la sala bebe @x tragos."
         ],
         [
           "none",
-          "@user1, reparte $x tragos a la persona que consideres más fea, en el caso de que seas tu, llora."
+          "@user1, reparte @x tragos a la persona que consideres más fea, en el caso de que seas tu, llora."
         ],
         [
           "none",
-          "$user1, tienes 15 segundos para acabar la copa, sino los consigues dale un beso negro a $user2, si no sabes que es busca en google."
+          "@user1, tienes 15 segundos para acabar la copa, sino los consigues dale un beso negro a @user2, si no sabes que es buscalo en google."
         ],
         [
           "none",
-          "Los jugadores que tenga una “A” en el nombre que beban $x tragos, en caso contrario, $user1 acábate la copa."
+          "Los jugadores que tengan una “A” en el nombre que beban @x tragos, en caso contrario, @user1 acábate la copa."
         ],
         [
           "none",
-          "Quien lleve lentillas bebe $x tragos que hay que hidratarse."
+          "Quien lleve lentillas bebe @x tragos, que hay que hidratarse!"
         ],
         [
           "none",
-          "En el caso de ser rubio/a bebe $x tragos."
+          "En el caso de ser rubio/a bebe @x tragos."
         ],
         [
           "none",
-          "Los usuarios de apple se acaban la copa, no queríais iphone pues ale."
+          "Los usuarios de apple que se \nacaben la copa! No queríais iphone? Pues ale."
+        ],
+        [
+          "Votaciones",
+          "El grupo decide cuantos tragos bebe @user1."
+        ],
+        [
+          "none",
+          "El/la que tenga más barba bebe @x tragos. "
+        ],
+        [
+          "none",
+          "Hay que compadecerse del más pequeño, todos debéis acabar con el mismo nivel de bebida del que menos tenga."
+        ],
+        [
+          "Random",
+          "Todos los jugadores beben medio vaso."
+        ],
+        [
+          "none",
+          "El/la que haya bebido en el turno anterior reparte @x tragos."
+        ],
+        [
+          "none",
+          "El último que beba un trago se acaba la copa."
+        ],
+        [
+          "none",
+          "El más peludo que beba @x tragos."
+        ],
+        [
+          "none",
+          "@user1 bebe @x tragos del vaso de @user2."
+        ],
+        [
+          "Confesiones",
+          "Todos los que hayan puesto alguna vez los cuernos que beban @x tragos."
+        ],
+        [
+          "Redes Sociales",
+          "@user1 debe subir la última foto del instagram de @user2 a su historia o bebe @x tragos. (No olvides etiquetar a @skolapp)."
+        ],
+        [
+          "Redes Sociales",
+          "@user1 le da like a 10 publicaciones que quiera @user2."
+        ],
+        [
+          "Redes Sociales",
+          "@user1 haz una encuesta en instagram de si es culo o codo, la foto la eliges tu o bebe @x tragos."
+        ],
+        [
+          "none",
+          "El que tenga más seguidores en instagram bebe @x tragos, toma influencer. "
+        ],
+        [
+          "Redes Sociales",
+          "@user1 bebe el número de tragos que el último número de la cifra de likes de tu última foto."
+        ],
+        [
+          "Redes Sociales",
+          "@user1, dos opciones, pon “me gusta” en la última foto de tu ex o bébete la copa del tirón, si no tienes ex, sal de la partida."
+        ],
+        [
+          "Random",
+          "@user1, bebe el número de tragos que elija el compañero de tu derecha. "
+        ],
+        [
+          "Random",
+          "@user1 , bebe el número de tragos que elija el compañero de tu izquierda. "
+        ],
+        [
+          "Random",
+          "@user1, bebe el número de tragos que elija el compañero de tu izquierda. "
+        ],
+        [
+          "Random",
+          "@user1 , bebe el número de tragos que elija el compañero de tu derecha."
+        ],
+        [
+          "Maldición",
+          "A partir de ahora tenemos que insultar a la persona de nuestra izquierda cada vez que nos toque beber, quien repita el insulto bebe @x tragos más."
+        ],
+        [
+          "none",
+          "Quien lleve calcetines bebe @x tragos."
+        ],
+        [
+          "Juegos",
+          "Palabras para los genitales femeninos, @user1 empiezas, el primero en quedarse sin ideas, bebe @x tragos."
+        ],
+        [
+          "none",
+          "El que tenga el móvil en la mano bebe @x tragos."
+        ],
+        [
+          "none",
+          "Aquellos cuyo nombre empiece por una consonante que beban @x tragos."
+        ],
+        [
+          "Juegos",
+          "\"Sagas de cine\" la persona que repita o no conozca ninguna beberá @x tragos."
+        ],
+        [
+          "Juegos",
+          "@user1 y @user2 juegan una partida a tres rondas de piedra, papel o tijeras, el perdedor deberá @x tragos."
+        ],
+        [
+          "Juegos",
+          "@user1 emite sonidos orgasmicos, si alguien se ríe bebe @x tragos."
+        ],
+        [
+          "Juegos",
+          "Empecemos a deletrear el primer apellido del jugador de tu derecha, empieza @user1, quien falle bebe @x tragos."
+        ],
+        [
+          "Juegos",
+          "Batalla de rimas!! @user1 vs. @user2, elegid una palabra y decid palabras que rimen entre ellas, quien se quede sin ideas bebe @x tragos."
+        ],
+        [
+          "Vicios",
+          "Quien fume que beba el número de cigarillos que le queden."
+        ],
+        [
+          "Juegos",
+          "Si alguien ha comprado tabaco esta semana que beba @x tragos."
+        ],
+        [
+          "Vicios",
+          "Quien se meta coca que beba el triple tres turnos, que va enchufao."
+        ],
+        [
+          "Vicios",
+          "Quien fume Maria que beba @x tragos."
+        ],
+        [
+          "Vicios",
+          "Si alguna vez has fumado de un vaper bebe @x tragos."
+        ],
+        [
+          "Vicios",
+          "Si alguna vez has fumado cachimba bebe @x tragos. "
+        ],
+        [
+          "Votaciones",
+          "Elegid democráticamente a la persona que se tire más pedos, deberá de acabarse la copa."
+        ],
+        [
+          "Votaciones",
+          "Elegid por votación a la persona más fea, que reparta sus tragos durante 3 turnos, ya tiene bastante."
+        ],
+        [
+          "Votaciones",
+          "Elegid democráticamente al que tenga más dinero y que pague otra ronda."
+        ],
+        [
+          "Votaciones",
+          "Designad a la persona con más probabilidades de acabar con una enfermedad de trasmisión sexual, que beba @x tragos, pero con precaución eh!"
+        ],
+        [
+          "Votaciones",
+          "Elegid democráticamente quien creeis que és el que más liga en una fiesta, que beba @x tragos por cabrón."
+        ],
+        [
+          "Votaciones",
+          "Elige tu bando, colacao o nesquik, la minoría que beba @x tragos."
+        ],
+        [
+          "Votaciones",
+          "Elige tu super poder, leer las mentes o volar, la minoría que beba @x tragos."
+        ],
+        [
+          "Votaciones",
+          "Elige tu bando, ferrari o lamborghini, la minoría que beba @x tragos."
+        ],
+        [
+          "Votaciones",
+          "Elige tu bando, android o ios, la minoría que beba @x tragos."
+        ],
+        [
+          "Votaciones",
+          "Elige tu bando, ron o ginebra, la minoría que beba @x tragos."
+        ],
+        [
+          "Maldiciones",
+          "Vamos a jugar a el famoso juego \"la pinza\" pero de otra forma. El que diga \"si\" o \"no\" tendrá que beber @x tragos hasta que termine la partida."
+        ],
+        [
+          "Maldiciones",
+          "La mesa está ardiendo! Los codos fuera, quien los apoye bebe @x tragos hasta que se termine la partida."
+        ],
+        [
+          "Maldiciones",
+          "Prohibido reírse durante dos turnos, quien lo haga bebe @x tragos."
+        ],
+        [
+          "Maldiciones",
+          "El juego continúa en grupos de dos, si uno bebe, el otro también!"
+        ],
+        [
+          "Maldiciones",
+          "Que todo el mundo se hable de usted, a cada error, que beba @x tragos."
+        ],
+        [
+          "Feminismo",
+          "Es la hora de las chicas! Que todas se acaben las copas."
+        ],
+        [
+          "Feminismo",
+          "Es la hora de los chicos! Que todas se acaben las copas."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
+        ],
+        [
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ]
       ],
       [
         [
           "none",
-          "$user1, bebe tantos tragos como novias te hayan dejado."
+          "@user1, bebe tantos tragos como novias te hayan dejado."
         ],
         [
           "none",
-          "$user1, si estás maquillado/a, reparte $x tragos, si no, bébete $x tragos."
+          "@user1, si estás maquillado/a, reparte @x tragos, si no, bébete @x tragos."
         ],
         [
           "none",
-          "$user1 , si alguna vez has llamado a tu pareja por el nombre de tu ex acábate la copa aplana-calles."
+          "@user1, si alguna vez has llamado a tu pareja por el nombre de tu ex acábate la copa aplana-calles. "
         ],
         [
           "none",
-          "$user1, si alguna vez has buscado tu móvil y lo tenias en la mano, bebe $x tragos."
+          "@user1, si alguna vez has buscado tu móvil y lo tenias en la mano, bebe @x tragos."
         ],
         [
           "none",
-          "$user1, bebe tantos tragos como la última cifra de tu edad."
+          "@user1, bebe tantos tragos como la última cifra de tu edad."
+        ],
+        [
+          "none",
+          "@user1, recuerda cuantas cobras te han hecho este año, llora, acabate la copa. "
+        ],
+        [
+          "none",
+          "@user1, si te falta un dedo reparte @x tragos, si no bebe @x tragos. "
+        ],
+        [
+          "none",
+          "@user1, si eres menor sigue tu turno 3 veces más."
+        ],
+        [
+          "none",
+          "@user1, ¡Enhorabuena! Reparte @x tragos."
+        ],
+        [
+          "none",
+          "@user1, bebe tantos tragos como pajas te agas en una semana, si no te haces pajas reparte @x tragos."
+        ],
+        [
+          "none",
+          "@user1, reparte tantos tragos como prendas negras lleves."
         ],
         [
           "Feminismo",
-          "$user1 si eres mujeres bebe $x tragos, si no lo eres, repartelos."
+          "@user1 si eres mujeres bebe @x tragos, si no lo eres, repartelos."
         ],
         [
           "Feminismo",
-          "$user1 si eres hombre bebe $x tragos, si no lo eres, repartelos."
+          "@user1 si eres hombre bebe @x tragos, si no lo eres, repartelos."
         ],
         [
-          "none",
-          "$user1, bebe tantos tragos como la última cifra de tu edad."
+          "Confesiones",
+          "@user1, bebe @x tragos si has estado en un puticlub."
         ],
         [
-          "none",
-          "$user1, bebe tantos tragos como la última cifra de tu edad."
+          "Confesiones",
+          "@user1, bebe @x tragos si te has hecho una paja en algún lugar que no sea tu casa."
+        ],
+        [
+          "Confesiones",
+          "@user1, bebe 4 tragos si meas en la ducha, si no bebes eres un trol de cojones."
+        ],
+        [
+          "Confesiones",
+          "@user1, bebe @x tragos si te has tirado un pedo en clase."
+        ],
+        [
+          "Confesiones",
+          "@user1, muestra tu historial de búsqueda o bebe @x tragos si te estás acojonado."
+        ],
+        [
+          "Confesiones",
+          "@user1, si te ha gustado alguna vez la ex de algún amigo tuyo, bebe @x tragos."
+        ],
+        [
+          "Confesiones",
+          "@user1, reparte @x tragos si has leído un libro entero este año, si no bebe @y tragos."
         ]
       ]
+    ],
+    [
+      "Prueba",
+      "Descripcion"
     ]
   ]
 }

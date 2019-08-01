@@ -1,0 +1,29 @@
+h2 {
+    font-family: 'Oraqle Script';
+    font-size: calc(90 * 80vw / 300);
+    margin: 12vw 10vw 0vw 10vw;
+}
+
+p {
+    text-align: center;
+    margin: 10vw 10vw;
+    font-size: calc(20* 80vw / 300);
+}
+
+.rojo {
+    width: 70vw;
+    background-color: red;
+    height: 45vw;
+    margin: 5vw 15vw;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.verde {
+    width: 70vw;
+    background-color: green;
+    height: 45vw;
+    margin: 5vw 15vw;
+    border: 3px solid black;
+    border-radius: 10px;
+}

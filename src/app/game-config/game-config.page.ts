@@ -117,6 +117,7 @@ export class GameConfigPage implements OnInit {
   empieza_el_juego() {
     /*Guardamos la información en el LocalStorage*/
     localStorage.setItem("pn", `${this.preguntas}`);
+    localStorage.setItem("d", `${this.dificultad}`);
 
     /*Se borran las notas y el atrás*/
     document.getElementById("notas").style.opacity = "0";
@@ -158,7 +159,7 @@ export class GameConfigPage implements OnInit {
           console.log(aleatorio);
           for (let vari = 0; vari < repetidos.length; vari++) {
             console.log(repetidos);
-            if (repetidos[vari] == aleatorio) {
+            if (repetidos[vari] == aleatorio.concat(modo_multiple)) {
               break;
             } else {
               salida = salida + 1;
