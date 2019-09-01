@@ -12,6 +12,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 })
 
 export class HomePage {
+  cache: string = localStorage.getItem("cache");
   constructor(public router: Router, /*private file: File,*/ public activeRoute:ActivatedRoute) {
     this.users = [
       {name:'Jugador 1', value:''},

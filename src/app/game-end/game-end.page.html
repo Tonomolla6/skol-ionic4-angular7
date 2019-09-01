@@ -1,6 +1,21 @@
 <ion-content color="primary">
-  <h2>Fin del juego</h2>
-  <p>Si no vais ciegos pulsa el boton verde, si no ves el botón verde pulsa el rojo.</p>
-  <div (click)='rutas("home");' class="verde"></div>
-  <div (click)='rutas("home");'class="rojo"></div>
+
+  <div class="policia">
+    <img class="casa_policia" src="assets/images/casa_policia.svg">
+    <img class="coche_rojo_policia" src="assets/images/coche_rojo.svg">
+    <img class="coche_amarillo_policia" src="assets/images/coche_amarillo.svg">
+    
+  </div>
+
+  <div class="policia_mensaje">
+    <img class="agente_policia" src="assets/images/policia.svg">
+    <img class="bocadillo" src="assets/images/bocadillo.svg">
+    <p>Donde van a estas horas?</p>
+  </div>
+  
+  <div class="policia_opciones">
+    <div (click)='rutas("preguntas");' class="verde"><p>VOLVER A JUGAR</p></div>
+    <div (click)='rutas("cartas");'class="azul"><p>CAMBIAR DE CARTA</p></div>
+  </div>
+  
 </ion-content>

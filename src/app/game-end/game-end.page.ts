@@ -16,6 +16,10 @@ export class GameEndPage implements OnInit {
   }
 
   rutas(ruta) {
-    this.router.navigateByUrl(`/${ruta}`);
+    if ( ruta == "cartas") {
+      this.router.navigateByUrl("/home");
+    } else if ( ruta == "preguntas") {
+      this.router.navigateByUrl("/game-config");
+    }
   }
 }

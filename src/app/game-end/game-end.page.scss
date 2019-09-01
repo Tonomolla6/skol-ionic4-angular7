@@ -1,29 +1,96 @@
-h2 {
-    font-family: 'Oraqle Script';
-    font-size: calc(90 * 80vw / 300);
-    margin: 12vw 10vw 0vw 10vw;
+
+div.policia {
+    position: relative;
+}
+div.policia img.casa_policia {
+    margin: 10vw 35vw 10vw 35vw;
+    width: 30vw;
 }
 
+div.policia img.casa_policia {
+    margin: 10vw 35vw 10vw 35vw;
+    width: 30vw;
+
+}
+
+div.policia img.coche_rojo_policia {
+    margin: 0px;
+    width: 17vw;
+    position: absolute;
+    bottom: 35px;
+    left: 14vw;
+}
+
+div.policia img.coche_amarillo_policia {
+    margin: 0px;
+    width: 17vw;
+    position: absolute;
+    bottom: 35px;
+    right: 10vw;
+}
+
+img.agente_policia {
+    margin: 0px;
+    width: 40vw;
+    transform: translate(10px, -5px);
+}
 p {
     text-align: center;
     margin: 10vw 10vw;
     font-size: calc(20* 80vw / 300);
 }
+div.policia_mensaje {
+    position: relative;
+    margin-top: 20px;
+}
 
-.rojo {
-    width: 70vw;
-    background-color: red;
-    height: 45vw;
-    margin: 5vw 15vw;
-    border: 3px solid black;
-    border-radius: 10px;
+div.policia_mensaje img.bocadillo{
+    position: absolute;
+    top: -30px;
+    width: 52vw;
+}
+
+div.policia_mensaje p{
+    position: absolute;
+    text-align: center;
+    margin: 10vw 10vw;
+    font-size: calc(20* 80vw / 300);
+    color: black;
+    top: -25px;
+    margin: 7vw 16vw 11vw 47vw;
+}
+
+div.policia_opciones {
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 }
 
 .verde {
     width: 70vw;
     background-color: green;
-    height: 45vw;
+    height: 15%;
     margin: 5vw 15vw;
     border: 3px solid black;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.azul {
+    width: 70vw;
+    background-color: blue;
+    height: 15%;
+    margin: 5vw 15vw;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

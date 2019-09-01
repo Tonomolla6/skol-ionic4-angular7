@@ -352,7 +352,7 @@
         ],
         [
           "none",
-          "@user1, si estás maquillado/a, reparte @x tragos, si no, bébete @x tragos."
+          "@user1, si estás maquillado/a, reparte @x tragos, si no, bébete @y tragos."
         ],
         [
           "none",
@@ -372,7 +372,7 @@
         ],
         [
           "none",
-          "@user1, si te falta un dedo reparte @x tragos, si no bebe @x tragos. "
+          "@user1, si te falta un dedo reparte @x tragos, si no bebe @y tragos. "
         ],
         [
           "none",
@@ -384,7 +384,7 @@
         ],
         [
           "none",
-          "@user1, bebe tantos tragos como pajas te agas en una semana, si no te haces pajas reparte @x tragos."
+          "@user1, bebe tantos tragos como pajas te hagas en una semana, si no te haces pajas reparte @x tragos."
         ],
         [
           "none",
@@ -416,7 +416,7 @@
         ],
         [
           "Confesiones",
-          "@user1, muestra tu historial de búsqueda o bebe @x tragos si te estás acojonado."
+          "@user1, muestra tu historial de búsqueda o bebe @x tragos si eres un rajado."
         ],
         [
           "Confesiones",

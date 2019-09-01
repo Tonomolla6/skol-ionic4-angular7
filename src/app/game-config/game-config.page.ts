@@ -214,7 +214,7 @@ export class GameConfigPage implements OnInit {
 
     setTimeout(function(){
       miguel.router.navigateByUrl('/questions')
-    }, 4500);
+    }, 3500);
 
   }
   atras() {
