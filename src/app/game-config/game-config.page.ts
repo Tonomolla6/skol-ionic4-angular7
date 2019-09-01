@@ -216,7 +216,22 @@ export class GameConfigPage implements OnInit {
       miguel.router.navigateByUrl('/questions')
     }, 3500);
 
+    setTimeout(function(){
+      document.getElementById("notas").style.opacity = "1";
+      document.getElementById("atras").style.opacity = "1";
+      document.getElementById("titulo_boton").innerHTML = "EMPIEZA LA FIESTA";
+      document.getElementById("boton_vista_tres").style.transform = "translateY(0vh)";
+      document.getElementById("palo").style.height = "0";
+      document.getElementById("cubo").style.top = "-100vh";
+      miguel.statusBar.backgroundColorByHexString('#702829');
+    }, 4500);
+
   }
+  
+
+
+
+
   atras() {
     this.router.navigateByUrl('/home');
   }

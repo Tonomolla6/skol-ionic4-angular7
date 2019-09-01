@@ -1,3 +1,11 @@
+div.oculto {
+    height: 100vh;
+    width: 100vw;
+    background-color: #702829;
+    position: absolute;
+    z-index: -1;
+}
+
 div.salir {
     background-image: url("src/assets/images/X.svg");
     width: 25px;

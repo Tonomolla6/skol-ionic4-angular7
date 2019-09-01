@@ -84,6 +84,7 @@ export class QuestionsPage implements OnInit {
       this.cont = this.cont + 1;
       var tope_de_preguntas: number = parseInt(this.preguntas_totales);
       if (this.cont == tope_de_preguntas ) {
+        document.getElementById("oculto").style.zIndex = "3";
         this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
         this.router.navigateByUrl('game-end');
       }
