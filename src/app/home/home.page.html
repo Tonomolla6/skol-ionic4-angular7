@@ -41,10 +41,24 @@
     <div id="formulario_cartas" class="formulario_cartas">
       <img class="img2" (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
       <div class="disenyo_cartas">
-        <div id="carta" class="carta">
-          <img (click)="info()" src="assets/images/info.svg"/>
-          <div class="carta_fondo"></div>
-        </div>
+
+        <div class="cartas_slider">
+          <div id="carta1" class="carta">
+            <img (click)="info()" src="assets/images/info.svg"/>
+            <div class="carta_fondo"></div>
+          </div>
+
+          <div id="carta2" class="carta">
+            <img (click)="info()" src="assets/images/info.svg"/>
+            <div class="carta_fondo"></div>
+          </div>
+
+          <div id="carta3" class="carta">
+            <img (click)="info()" src="assets/images/info.svg"/>
+            <div class="carta_fondo"></div>
+          </div>  
+        </div> 
+        
         <h2 id="titulo_carta" class="titulo_carta">{{cartas[0]}}</h2>
       </div>
       <img class="img1" (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
