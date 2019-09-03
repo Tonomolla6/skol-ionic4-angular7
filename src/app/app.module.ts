@@ -13,6 +13,9 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 import { File } from '@ionic-native/file/ngx';
 
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,6 +25,7 @@ import { File } from '@ionic-native/file/ngx';
     SplashScreen,
     File,
     ScreenOrientation,
+    NativeAudio,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

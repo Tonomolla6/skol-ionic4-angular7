@@ -1,5 +1,6 @@
-<ion-content color="primary">
 
+<ion-content color="primary">
+  <div id="bloque" class="bloque"></div>
   <!-- div oculto -->
   <div id="atras_vista_uno" (click)="atras_vista_uno()" class="atras"></div>
 
@@ -25,7 +26,7 @@
   </div>
 
   <div id="formulario_usuarios" class="formulario_usuarios">
-      <h3>UNA MESA PARA...</h3>
+      <h3 id="mierda">UNA MESA PARA...</h3>
       <form class="usuarios">
         <div>
           <ion-col id="lista_usuarios">
@@ -39,29 +40,29 @@
     </div>
   
     <div id="formulario_cartas" class="formulario_cartas">
-      <img class="img2" (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
+      <img id="img_i" class="img2" (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
       <div class="disenyo_cartas">
 
-        <div class="cartas_slider">
-          <div id="carta1" class="carta">
+        <div id="cartas_slider" class="cartas_slider">
+          <div class="carta">
             <img (click)="info()" src="assets/images/info.svg"/>
-            <div class="carta_fondo"></div>
+            <img id="carta_fondo1" class="carta_fondo"/>
           </div>
 
-          <div id="carta2" class="carta">
+          <div class="carta">
             <img (click)="info()" src="assets/images/info.svg"/>
-            <div class="carta_fondo"></div>
+            <img id="carta_fondo2" class="carta_fondo" src="assets/themes/0.jpg"/>
           </div>
 
-          <div id="carta3" class="carta">
+          <div class="carta">
             <img (click)="info()" src="assets/images/info.svg"/>
-            <div class="carta_fondo"></div>
+            <img id="carta_fondo3" class="carta_fondo"/>
           </div>  
         </div> 
         
         <h2 id="titulo_carta" class="titulo_carta">{{cartas[0]}}</h2>
       </div>
-      <img class="img1" (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
+      <img id="img_d" class="img1" (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
     </div>
   
 

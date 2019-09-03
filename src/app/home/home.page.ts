@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { File } from '@ionic-native/file/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+
 
 
 @Component({
@@ -13,12 +15,14 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 export class HomePage {
   cache: string = localStorage.getItem("cache");
-  constructor(public router: Router, /*private file: File,*/ public activeRoute:ActivatedRoute) {
+  constructor(public router: Router, /*private file: File,*/ public activeRoute:ActivatedRoute, public nativeAudio: NativeAudio) {
     this.users = [
       {name:'Jugador 1', value:''},
       {name:'Jugador 2', value:''},
       {name:'Jugador 3', value:''}
     ]
+    this.nativeAudio.play('fondo');
+    this.nativeAudio.loop('fondo');
     
     this.tema = 0;
 
@@ -31,6 +35,8 @@ export class HomePage {
       this.descripcion[index] = localStorage.getItem(`t${index}d`);
     }
   }
+  
+
 
   /* ESTA PARTE ES PARA LA VISTA 1 */
     users: object[];
@@ -140,24 +146,68 @@ export class HomePage {
     boton_vista_dos() {
       localStorage.setItem("t", `${this.tema}`);
     }
-    
     posicion_cartas(direccion) {
       if (direccion == "derecha") {
+
+        document.getElementById("cartas_slider").style.left = "-100vw";
+        document.getElementById("bloque").style.display = "block";    
+        document.getElementById("img_d").style.right = "-1vw";
+        setTimeout(function(){
+          document.getElementById("img_d").style.right = "0vw"; 
+        }, 200);
+        setTimeout(function(){
+          document.getElementById("cartas_slider").style.transition = "0s";
+          document.getElementById("cartas_slider").style.left = "0vw";
+        }, 750);
+        setTimeout(function(){
+          document.getElementById("cartas_slider").style.transition = "0.6s";
+          document.getElementById("bloque").style.display = "none";
+        }, 800);
+
         if (this.tema == this.cartas.length - 1) {
           this.tema = 0;
+          var foto = this.tema;
         } else {
           this.tema = this.tema + 1;
+          var foto = this.tema;
         }
+        document.getElementById("carta_fondo3").setAttribute('src', `assets/themes/${foto}.jpg`);
+        setTimeout(function(){
+          document.getElementById("carta_fondo2").setAttribute('src', `assets/themes/${foto}.jpg`);
+        }, 700);
       } else if (direccion == "izquierda") {
+
+        document.getElementById("cartas_slider").style.left = "100vw";
+        document.getElementById("bloque").style.display = "block";    
+        document.getElementById("img_i").style.left = "-1vw";
+        setTimeout(function(){
+          document.getElementById("img_i").style.left = "0vw"; 
+        }, 200);
+        setTimeout(function(){
+          document.getElementById("cartas_slider").style.transition = "0s";
+          document.getElementById("cartas_slider").style.left = "0vw";
+        }, 750);
+        setTimeout(function(){
+          document.getElementById("cartas_slider").style.transition = "0.6s";
+          document.getElementById("bloque").style.display = "none";
+        }, 800);
+
         if (this.tema == 0) {
           this.tema = this.cartas.length - 1;
+          var foto = this.tema;
         } else {
           this.tema = this.tema - 1;
+          var foto = this.tema;
         }
+        document.getElementById("carta_fondo1").setAttribute('src', `assets/themes/${foto}.jpg`);
+        setTimeout(function(){
+          document.getElementById("carta_fondo2").setAttribute('src', `assets/themes/${foto}.jpg`);
+        }, 700);
       }
       /*Imprime los datos*/
       document.getElementById("titulo_carta").innerHTML = this.cartas[this.tema];
       document.getElementById("descripcion").innerHTML = this.descripcion[this.tema];
+      document.getElementById("carta_fondo2").style.backgroundImage = `assets/themes/${[this.tema]}.jpg`;
     }
 
     info() {

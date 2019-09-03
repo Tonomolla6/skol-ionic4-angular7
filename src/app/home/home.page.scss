@@ -1,3 +1,10 @@
+div.bloque {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    z-index: 24;
+}
 div.atras {
     opacity: 0;
     transition: 1s;
@@ -135,14 +142,18 @@ div.formulario_cartas img {
 
 div.formulario_cartas .img1 {
     position: absolute;
-    right:0;
+    right: 0;
     margin-right: 10px;
+    z-index: 3;
+    transition: 0.1s
 }
 
 div.formulario_cartas .img2 {
     position: absolute;
-    left:0;
+    left: 0;
     margin-left: 10px;
+    z-index: 3;
+    transition: 0.1s
 }
 
 div.formulario_cartas div.disenyo_cartas {
@@ -156,6 +167,10 @@ div.formulario_cartas div.disenyo_cartas {
 
 div.formulario_cartas div.disenyo_cartas div.cartas_slider {
     display: flex;
+    position: relative;
+    left: 0vw;
+    transition: 0.600s;
+    z-index: 2;
 }
 
 
@@ -177,11 +192,12 @@ div.formulario_cartas div.carta img {
     right: -32px;
 }
 
-div.formulario_cartas div.carta div.carta_fondo {
+div.formulario_cartas div.carta img.carta_fondo {
     width: 210px;
     height: 200px;
-    background-color: black;
     margin: 13px;
+    transform: translatex(-36px);
+    background-color: black;
 }
 
 div.formulario_cartas h2 {
