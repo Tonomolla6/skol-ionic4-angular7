@@ -2,7 +2,7 @@
 <ion-content color="primary">
   <div id="bloque" class="bloque"></div>
   <!-- div oculto -->
-  <div id="atras_vista_uno" (click)="atras_vista_uno()" class="atras"></div>
+  <div id="atras_vista_uno" (click)='sonidos("salir")' (click)="atras_vista_uno()" class="atras"></div>
 
   <div id="partesuperior" class="partesuperior">
     <h1>Long live <br>&nbsp;&nbsp;&nbsp;&nbsp;the party</h1>
@@ -10,6 +10,7 @@
   </div>
 
   <div id="barra" class="barra">
+    <img id="camarero" class="camarero" src="assets/images/camarero.svg"/>
     <img class="barrasuperior" width="294px" src="assets/images/barra_de_arriba_copas.svg"/>
     <div class="barra_top_img">
       <div class="barra_top2_img"></div>
@@ -34,74 +35,91 @@
             <ion-input *ngFor="let item of users" type="text" name="{{item.name}}" [(ngModel)]="item.value" placeholder="{{item.name}}"></ion-input> <!-- id="{{item.id}}" -->
           </ion-col>
           <!-- Añade otra posicion al array "users" -->
-          <div id="plus" class="plus" (click)="mas_jugadores()"></div>
+          <div id="plus" class="plus" (click)='sonidos("normal")' (click)="mas_jugadores()"></div>
         </div>
       </form>
     </div>
   
     <div id="formulario_cartas" class="formulario_cartas">
-      <img id="img_i" class="img2" (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
+      <img id="img_i" class="img2" (click)='sonidos("normal")' (click)="posicion_cartas('izquierda')" src="assets/images/flecha_izquierda.svg"/>
       <div class="disenyo_cartas">
 
         <div id="cartas_slider" class="cartas_slider">
           <div class="carta">
-            <img (click)="info()" src="assets/images/info.svg"/>
+            <img (click)="info()" (click)='sonidos("normal")' src="assets/images/info.svg"/>
             <img id="carta_fondo1" class="carta_fondo"/>
           </div>
 
           <div class="carta">
-            <img (click)="info()" src="assets/images/info.svg"/>
-            <img id="carta_fondo2" class="carta_fondo" src="assets/themes/0.jpg"/>
+            <img (click)="info()" (click)='sonidos("normal")' src="assets/images/info.svg"/>
+            <img id="carta_fondo2" class="carta_fondo" src="assets/themes/0.svg"/>
           </div>
 
           <div class="carta">
-            <img (click)="info()" src="assets/images/info.svg"/>
+            <img (click)="info()" (click)='sonidos("normal")' src="assets/images/info.svg"/>
             <img id="carta_fondo3" class="carta_fondo"/>
           </div>  
         </div> 
         
         <h2 id="titulo_carta" class="titulo_carta">{{cartas[0]}}</h2>
       </div>
-      <img id="img_d" class="img1" (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
+      <img id="img_d" class="img1" (click)='sonidos("normal")' (click)="posicion_cartas('derecha')" src="assets/images/flecha_derecha.svg"/>
     </div>
   
 
   <!-- div oculto -->
-  <div id="boton_vista_dos" (click)="boton_vista_dos()" (click)="siguente()" class="boton">
+  <div id="boton_vista_dos" (click)='sonidos("normal")' (click)="boton_vista_dos()" (click)="siguente()" class="boton">
       <img width="260px" src="assets/images/boton_del_juego_2.svg"/>
       <h2>SIGUENTE</h2>
   </div>
 
-  <div id="boton_vista_uno" (click)="boton_vista_uno()" class="boton">
+  <div id="boton_vista_uno" (click)='sonidos("normal")' (click)="boton_vista_uno()" class="boton">
       <img width="260px" src="assets/images/boton_del_juego_1.svg"/>
       <h2>JUGAR</h2>
   </div>
 
-  <img (click)='ajustes("abrir")' id="ajustes" class="ajustes" width="30px" src="assets/images/ajustes.svg"/>
+  <img (click)='ajustes("abrir")' (click)='sonidos("normal")' id="ajustes" class="ajustes" width="30px" src="assets/images/ajustes.svg"/>
 
   <!-- div oculto mensajes -->  
   
   <div id="ajuste_oculto_fondo" class="ajuste_oculto_fondo">
-    <div id="ajuste_oculto" class="ajuste_oculto">
+  <!--  <div id="ajuste_oculto" class="ajuste_oculto">
       <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
       <p>Tono Mollá Gonzalez</p>
       <p>Instagram: @tonomolla6</p>
-    </div>
+    </div>-->
 
     <div class="mensaje_alerta" id="mensaje_amigos">
-      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
+      <img (click)='ajustes("cerrar")' (click)='sonidos("salir")' width="30px" src="assets/images/X.svg"/>
       <p>El minimo de jugadores son 2</p>
     </div>
 
     <div class="mensaje_alerta" id="mensaje_vacio">
-      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
+      <img (click)='ajustes("cerrar")' (click)='sonidos("salir")' width="30px" src="assets/images/X.svg"/>
       <p>No ha inscrito a ningún jugador.</p>
     </div>
 
     <div id="info_oculto" class="info_oculto">
-      <img (click)='ajustes("cerrar")' width="30px" src="assets/images/X.svg"/>
+      <img (click)='ajustes("cerrar")' (click)='sonidos("salir")' width="30px" src="assets/images/X.svg"/>
       <p id="descripcion">{{descripcion[0]}}</p>  
     </div>
+
+   
+
+    
+    
+  </div>
+  <div id="ajuste_desplegable" class="ajuste_desplegable">
+    <img id="fondo" class="icono" (click)='volumen("fondo")' width="22px" src="assets/images/volumen_up.svg"/>
+    <img id="sound" class="icono" (click)='volumen("sound")' width="30px" src="assets/images/sound_up.svg"/>
+    <img class="icono" width="32px" height="35px" src="assets/images/star.svg"/>
+    <img class="x" (click)='ajustes("cerrar")' (click)='sonidos("salir")' width="30px" src="assets/images/X.svg"/>
+  </div>
+
+  <div id="mensajes_desplegable" class="mensajes_desplegable">
+      <div class="volumen">MUSICA DE FONDO</div>
+      <div class="volumen">SONIDO BOTONES</div>
+    <div class="volumen">PUNTUA LA APP</div>
   </div>
 
 </ion-content>

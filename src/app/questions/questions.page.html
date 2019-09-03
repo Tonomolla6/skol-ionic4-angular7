@@ -1,6 +1,6 @@
 <ion-content color="secondary">
     <div id="oculto" class="oculto"></div>
-    <div (click)='salir("mensaje");' class="salir"></div>
+    <div (click)='sonidos("salir")' (click)='salir("mensaje");' class="salir"></div>
 
     <div id="contador_preguntas" class="contador_preguntas">0/0</div>
 
@@ -13,8 +13,8 @@
         <div class="alerta_salir">
             <p>¿Estás seguro?   Perderás el progreso de la partida.</p>
             <div class="botones">
-                <div (click)='salir("salir");' class="salir_boton">Salir</div>
-                <div (click)='salir("continuar");' class="continuar">Continuar</div>
+                <div (click)='sonidos("normal")' (click)='salir("salir");' class="salir_boton">Salir</div>
+                <div (click)='sonidos("normal")' (click)='salir("continuar");' class="continuar">Continuar</div>
             </div>
         </div>
     </div>

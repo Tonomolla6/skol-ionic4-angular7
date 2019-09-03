@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { File } from '@ionic-native/file/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
-
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 
 @Component({
@@ -15,7 +15,8 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 export class HomePage {
   cache: string = localStorage.getItem("cache");
-  constructor(public router: Router, /*private file: File,*/ public activeRoute:ActivatedRoute, public nativeAudio: NativeAudio) {
+  
+  constructor(public router: Router, private statusBar: StatusBar,/*private file: File,*/ public activeRoute:ActivatedRoute, public nativeAudio: NativeAudio) {
     this.users = [
       {name:'Jugador 1', value:''},
       {name:'Jugador 2', value:''},
@@ -25,6 +26,8 @@ export class HomePage {
     this.nativeAudio.loop('fondo');
     
     this.tema = 0;
+    localStorage.setItem("fondo", "0");
+    localStorage.setItem("sonido", "yes");
 
     /*Asignamos los nombres de los temas y su descripción*/
     this.cartas = ["0"];
@@ -34,13 +37,40 @@ export class HomePage {
       this.cartas[index] = localStorage.getItem(`t${index}`);
       this.descripcion[index] = localStorage.getItem(`t${index}d`);
     }
+    this.camareros();
   }
   
 
 
   /* ESTA PARTE ES PARA LA VISTA 1 */
     users: object[];
-    
+    intervalo_camarero;
+    camareros() {
+      var cambio_de_turno: number = 0;
+      var siguente_turno: string = "camarero";
+      this.intervalo_camarero = setInterval(function intervalo(){ 
+        
+        if (cambio_de_turno >= 6 ) {
+          document.getElementById("camarero").style.left = `-20vw`;
+          if (siguente_turno == "camarero") {
+            siguente_turno = "camarera";
+          } else {
+            siguente_turno = "camarero";
+          }
+          setTimeout(function(){ 
+            document.getElementById("camarero").setAttribute('src', `assets/images/${siguente_turno}.svg`);
+          }, 1500);
+          cambio_de_turno = 0;
+        } else {
+          var posicion = Math.random() * (83 - 13) + 13;
+          document.getElementById("camarero").style.left = `${posicion}vw`;
+          cambio_de_turno = cambio_de_turno + 1;
+          console.log(cambio_de_turno);
+        }
+      }, 4000);
+      this.intervalo_camarero;
+    }
+
     boton_vista_uno() {
       var x: number = 0;
       var solo_uno: number;
@@ -85,6 +115,7 @@ export class HomePage {
         document.getElementById("formulario_usuarios").style.opacity = "0";
         document.getElementById("formulario_cartas").style.display = "flex";
         document.getElementById("ajustes").style.display = "none";
+        
         setTimeout(function(){
           document.getElementById("formulario_usuarios").style.display = "none";
           document.getElementById("formulario_cartas").style.opacity = "1";
@@ -105,16 +136,68 @@ export class HomePage {
       ajustes(estado) {
         if (estado == "abrir") {
           document.getElementById("ajuste_oculto_fondo").style.display = "flex";
-          document.getElementById("ajuste_oculto").style.display = "flex";
+          this.statusBar.backgroundColorByHexString('#531e1e');
+
+          /*document.getElementById("ajuste_oculto").style.display = "flex"; */
+          document.getElementById("ajuste_desplegable").style.transform = "translateX(0px)";
+          document.getElementById("ajustes").style.transform = "translateX(-50px)rotate(-300deg)";
+          document.getElementById("mensajes_desplegable").style.transform ="translate(0px)";
           
         } else if (estado == "cerrar") {
           document.getElementById("ajuste_oculto_fondo").style.display = "none";
-          document.getElementById("ajuste_oculto").style.display = "none";
+          this.statusBar.backgroundColorByHexString('#702829');
+
+          /*document.getElementById("ajuste_oculto").style.display = "none"; */
           document.getElementById("mensaje_amigos").style.display = "none";
           document.getElementById("mensaje_vacio").style.display = "none";
           document.getElementById("info_oculto").style.display = "none";
+          document.getElementById("ajustes").style.transform = "translateX(0px)rotate(0deg)";
+          document.getElementById("ajuste_desplegable").style.transform = "translateX(-65px)";
+          document.getElementById("mensajes_desplegable").style.transform ="translateX(-255px)";
         }
       }
+
+    volumen(modo) {
+      var fondo = localStorage.getItem("fondo");
+      var sound = localStorage.getItem("sound");
+
+      if (modo == "fondo") {
+        if (fondo == "0") {
+
+          document.getElementById("fondo").setAttribute('src', 'assets/images/volumen_down.svg');
+          this.nativeAudio.stop('fondo');
+          localStorage.setItem("fondo", "1");
+        } else {
+
+          this.nativeAudio.play('fondo');
+          document.getElementById("fondo").setAttribute('src', 'assets/images/volumen_up.svg');
+          localStorage.setItem("fondo", "0");
+        }
+      } else if (modo == "sound") {
+        if (sound == "0") {
+          document.getElementById("sound").setAttribute('src', 'assets/images/sound_down.svg');
+          localStorage.setItem("sound", "1");
+          localStorage.setItem("sonido", "no");
+
+        } else {
+          document.getElementById("sound").setAttribute('src', 'assets/images/sound_up.svg');
+          localStorage.setItem("sound", "0");
+          localStorage.setItem("sonido", "yes");
+        }
+      }
+    }
+
+    sonidos(tipo) {
+      var activador = localStorage.getItem("sonido");
+      
+      if (activador == "yes") {
+        if (tipo == "normal") {
+          this.nativeAudio.play('normal');
+        } else if (tipo == "salir") {
+          this.nativeAudio.play('salir');
+        }
+      } 
+    }
 
   /* ESTA PARTE ES PARA LA VISTA DOS */
     cartas: string[];
@@ -141,6 +224,7 @@ export class HomePage {
         document.getElementById("formulario_cartas").style.display = "none";
         document.getElementById("formulario_usuarios").style.opacity = "1";
       }, 200);
+
     }
 
     boton_vista_dos() {
@@ -171,9 +255,9 @@ export class HomePage {
           this.tema = this.tema + 1;
           var foto = this.tema;
         }
-        document.getElementById("carta_fondo3").setAttribute('src', `assets/themes/${foto}.jpg`);
+        document.getElementById("carta_fondo3").setAttribute('src', `assets/themes/${foto}.svg`);
         setTimeout(function(){
-          document.getElementById("carta_fondo2").setAttribute('src', `assets/themes/${foto}.jpg`);
+          document.getElementById("carta_fondo2").setAttribute('src', `assets/themes/${foto}.svg`);
         }, 700);
       } else if (direccion == "izquierda") {
 
@@ -199,15 +283,15 @@ export class HomePage {
           this.tema = this.tema - 1;
           var foto = this.tema;
         }
-        document.getElementById("carta_fondo1").setAttribute('src', `assets/themes/${foto}.jpg`);
+        document.getElementById("carta_fondo1").setAttribute('src', `assets/themes/${foto}.svg`);
         setTimeout(function(){
-          document.getElementById("carta_fondo2").setAttribute('src', `assets/themes/${foto}.jpg`);
+          document.getElementById("carta_fondo2").setAttribute('src', `assets/themes/${foto}.svg`);
         }, 700);
       }
       /*Imprime los datos*/
       document.getElementById("titulo_carta").innerHTML = this.cartas[this.tema];
       document.getElementById("descripcion").innerHTML = this.descripcion[this.tema];
-      document.getElementById("carta_fondo2").style.backgroundImage = `assets/themes/${[this.tema]}.jpg`;
+      document.getElementById("carta_fondo2").style.backgroundImage = `assets/themes/${[this.tema]}.svg`;
     }
 
     info() {

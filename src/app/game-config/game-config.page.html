@@ -1,7 +1,7 @@
 <ion-content color="primary">
 
         <!-- div oculto -->
-        <div id="atras" (click)="atras();" class="atras"></div>
+        <div id="atras" (click)='sonidos("salir")' (click)="atras();" class="atras"></div>
 
         <div id="notas" class="notas">
             <div class="configuracion_notas">
@@ -9,15 +9,15 @@
                     <p class="titulo_dificultad">DIFICULTAD</p>
                     <div>
                         <div class="imagen_dificultad_juego">
-                                <img id="vaso" (click)="dificultad_change('vaso');" width="40" src="assets/images/vaso_vacio.svg"/>
+                                <img id="vaso" (click)='sonidos("normal")' (click)="dificultad_change('vaso');" width="40" src="assets/images/vaso_vacio.svg"/>
                                 <p id="vaso_p">FACIL</p>
                         </div>
                         <div class="imagen_dificultad_juego">
-                                <img id="jarra" (click)="dificultad_change('jarra');" width="50" src="assets/images/jarra_llena.svg"/>
+                                <img id="jarra" (click)='sonidos("normal")' (click)="dificultad_change('jarra');" width="50" src="assets/images/jarra_llena.svg"/>
                                 <p id="jarra_p">NORMAL</p>
                         </div>
                         <div class="imagen_dificultad_juego">
-                                <img id="cerveza" (click)="dificultad_change('cerveza');" width="70" src="assets/images/cerveza_vacia.svg"/>
+                                <img id="cerveza" (click)='sonidos("normal")' (click)="dificultad_change('cerveza');" width="70" src="assets/images/cerveza_vacia.svg"/>
                                 <p id="cerveza_p">DIFICIL</p>
                         </div>
                     </div>
@@ -27,15 +27,15 @@
                     <p class="titulo_modo">TIPOS DE PREGUNTAS</p>
                     <div>
                         <div class="imagen_modo_juego">
-                                <img id="grupo" (click)="modo_change('grupo');" height="60" src="assets/images/modo_grupo.svg"/>
+                                <img id="grupo" (click)='sonidos("normal")' (click)="modo_change('grupo');" height="60" src="assets/images/modo_grupo.svg"/>
                                 <p id="grupo_p">GRUPO</p>
                         </div>
                         <div class="imagen_modo_juego individual_modo">
-                                <img id="individual" (click)="modo_change('individual');" height="60" src="assets/images/modo_individual.svg"/>
+                                <img id="individual" (click)='sonidos("normal")' (click)="modo_change('individual');" height="60" src="assets/images/modo_individual.svg"/>
                                 <p id="individual_p">INDIVIDUAL</p>
                         </div>
                         <div class="imagen_modo_juego">
-                                <img id="todos" (click)="modo_change('todos');" height="60" src="assets/images/modo_todos.svg"/>
+                                <img id="todos" (click)='sonidos("normal")' (click)="modo_change('todos');" height="60" src="assets/images/modo_todos.svg"/>
                                 <p id="todos_p">TODAS</p>
                         </div>
                     </div>
@@ -45,15 +45,15 @@
                     <p class="titulo_preguntas">NUMERO DE PREGUNTAS</p>
                     <div class="preguntas">
                         <div class="imagen_preguntas_juego">
-                                <img id="diez" (click)="preguntas_change('diez');" height="40" src="assets/images/1_chupito_lleno.svg"/>
+                                <img id="diez"(click)='sonidos("normal")'  (click)="preguntas_change('diez');" height="40" src="assets/images/1_chupito_lleno.svg"/>
                                 <p id="diez_p">10</p>
                         </div>
                         <div class="imagen_preguntas_juego">
-                                <img id="veinte" (click)="preguntas_change('veinte');" height="40" src="assets/images/2_chupito_vacio.svg"/>
+                                <img id="veinte" (click)='sonidos("normal")' (click)="preguntas_change('veinte');" height="40" src="assets/images/2_chupito_vacio.svg"/>
                                 <p id="veinte_p">20</p>
                         </div>
                         <div class="imagen_preguntas_juego">
-                                <img id="treinta" (click)="preguntas_change('treinta');" height="61" src="assets/images/3_chupito_vacio.svg"/>
+                                <img id="treinta" (click)='sonidos("normal")' (click)="preguntas_change('treinta');" height="61" src="assets/images/3_chupito_vacio.svg"/>
                                 <p id="treinta_p">30</p>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
         </div>
 
         <!--Boton -->
-        <div id="boton_vista_tres" (click)="empieza_el_juego()" class="boton">
+        <div id="boton_vista_tres" (click)='sonidos("normal")' (click)="empieza_el_juego()" class="boton">
             <img id="boton_vista_tres_img" width="260px" src="assets/images/boton_del_juego_3.svg"/>
             <h2 id="titulo_boton">EMPIEZA LA FIESTA</h2>
         </div>

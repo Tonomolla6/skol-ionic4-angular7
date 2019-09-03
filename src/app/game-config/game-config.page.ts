@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { File } from '@ionic-native/file/ngx';
 })
 export class GameConfigPage implements OnInit {
 
-  constructor(public router: Router, private statusBar: StatusBar, private file: File) { 
+  constructor(public router: Router, private statusBar: StatusBar, private file: File ,public nativeAudio: NativeAudio) { 
 
   }
 
@@ -113,7 +114,19 @@ export class GameConfigPage implements OnInit {
 
     }
   }
-  
+
+  sonidos(tipo) {
+    var activador = localStorage.getItem("sonido");
+    
+    if (activador == "yes") {
+      if (tipo == "normal") {
+        this.nativeAudio.play('normal');
+      } else if (tipo == "salir") {
+        this.nativeAudio.play('salir');
+      }
+    } 
+  }
+
   empieza_el_juego() {
     /*Guardamos la información en el LocalStorage*/
     localStorage.setItem("pn", `${this.preguntas}`);
@@ -223,7 +236,6 @@ export class GameConfigPage implements OnInit {
       document.getElementById("boton_vista_tres").style.transform = "translateY(0vh)";
       document.getElementById("palo").style.height = "0";
       document.getElementById("cubo").style.top = "-100vh";
-      miguel.statusBar.backgroundColorByHexString('#702829');
     }, 4500);
 
   }

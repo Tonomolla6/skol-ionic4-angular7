@@ -31,6 +31,9 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.nativeAudio.preloadComplex('fondo', 'assets/songs/fondo.mp3', 1, 1, 0);
 
+      this.nativeAudio.preloadSimple('salir', 'assets/songs/boton_cerrar.mp3');
+      this.nativeAudio.preloadSimple('normal', 'assets/songs/boton_principal.mp3');
+
       this.splashScreen.hide();
       this.statusBar.backgroundColorByHexString('#702829');
       localStorage.clear();

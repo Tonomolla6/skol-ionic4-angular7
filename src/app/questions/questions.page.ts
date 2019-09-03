@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 @Component({
   selector: 'app-questions',
@@ -12,7 +13,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 export class QuestionsPage implements OnInit {
   preguntas_totales = localStorage.getItem("pn");
   cont = 0;
-  constructor( public activeRoute: ActivatedRoute , private statusBar: StatusBar, public router: Router, private screenOrientation: ScreenOrientation) {
+  constructor( public activeRoute: ActivatedRoute , public nativeAudio: NativeAudio, private statusBar: StatusBar, public router: Router, private screenOrientation: ScreenOrientation) {
     this.screenOrientation.unlock();
   }
 
@@ -64,6 +65,18 @@ export class QuestionsPage implements OnInit {
     }
 
   }
+  
+  sonidos(tipo) {
+    var activador = localStorage.getItem("sonido");
+    
+    if (activador == "yes") {
+      if (tipo == "normal") {
+        this.nativeAudio.play('normal');
+      } else if (tipo == "salir") {
+        this.nativeAudio.play('salir');
+      }
+    } 
+  }
 
   salir(estado) {
     if (estado == "mensaje") {
@@ -86,6 +99,7 @@ export class QuestionsPage implements OnInit {
       if (this.cont == tope_de_preguntas ) {
         document.getElementById("oculto").style.zIndex = "3";
         this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+        this.statusBar.backgroundColorByHexString('#702829');
         this.router.navigateByUrl('game-end');
       }
       var numero_jugadores: number = parseInt(localStorage.getItem("jn"))
