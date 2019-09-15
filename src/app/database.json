@@ -2,7 +2,7 @@
   "temas": [
     [
       "Una fiesta pendiente",
-      "Este tema está creado especialmente para un grupo de amigos sin ninguna clase de interés sexual ni sentimental, és para pasarlo bien con el alchol y estar listos para la fiesta!!",
+      "El tema mas \"light\", son preguntas sueltas de temas diferentes para jugar con unos buenos amigos y sobre todo para disfrutar la fiesta!!!",
       [
         [
           "none",
@@ -348,7 +348,7 @@
       [
         [
           "none",
-          "@user1, bebe tantos tragos como novias te hayan dejado."
+          "@user1, bebe tantos tragos como novias/os te hayan dejado."
         ],
         [
           "none",
@@ -368,7 +368,7 @@
         ],
         [
           "none",
-          "@user1, recuerda cuantas cobras te han hecho este año, llora, acabate la copa. "
+          "@user1, recuerda cuantas cobras te han hecho este año, llora, acabate la copa."
         ],
         [
           "none",
@@ -392,7 +392,7 @@
         ],
         [
           "Feminismo",
-          "@user1 si eres mujeres bebe @x tragos, si no lo eres, repartelos."
+          "@user1 si eres mujer bebe @x tragos, si no lo eres, repartelos."
         ],
         [
           "Feminismo",
@@ -429,8 +429,20 @@
       ]
     ],
     [
-      "Prueba",
-      "Descripcion"
+      "Un poco de calor!",
+      "Si hay alguien que te atrae en este grupo... Has elegido bien, este es tu tema. Vamos a hacer que arda el ambiente!"
+    ],
+    [
+      "Prueba o verdad",
+      "Espero que llevéis toda la adolescencia jugando a juegos de consola por que si es así este es vuestro tema!"
+    ],
+    [
+      "Coma etílico",
+      "Hacedme caso, NUNCA habéis estado en una fiesta de verdad, probad este tema, y partíos de la risa con las burradas más locas."
+    ],
+    [
+      "Solo para adultos",
+      "Este es un tema para adultos, son retos y pruebas traviesas, la parte erótica de la aplicación, a disfrutar!"
     ]
   ]
 }

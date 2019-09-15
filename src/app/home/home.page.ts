@@ -22,7 +22,6 @@ export class HomePage {
       {name:'Jugador 2', value:''},
       {name:'Jugador 3', value:''}
     ]
-    this.nativeAudio.play('fondo');
     this.nativeAudio.loop('fondo');
     
     this.tema = 0;
@@ -109,13 +108,21 @@ export class HomePage {
         document.getElementById("silla1").style.opacity = "0";
         document.getElementById("silla4").style.opacity = "0";
         document.getElementById("carta_titulo").style.opacity = "1";
-        document.getElementById("boton_vista_uno").style.opacity = "0";
-        document.getElementById("boton_vista_dos").style.opacity = "1";
         document.getElementById("boton_vista_dos").style.zIndex = "3";
         document.getElementById("formulario_usuarios").style.opacity = "0";
         document.getElementById("formulario_cartas").style.display = "flex";
         document.getElementById("ajustes").style.display = "none";
         
+        
+      document.getElementById("boton_vista_uno").style.bottom = "-3px";
+      setTimeout(function(){
+        document.getElementById("boton_vista_uno").style.bottom = "0px";
+       }, 100);
+       setTimeout(function(){
+        document.getElementById("boton_vista_uno").style.opacity = "0";
+        document.getElementById("boton_vista_dos").style.opacity = "1";
+       }, 150);
+
         setTimeout(function(){
           document.getElementById("formulario_usuarios").style.display = "none";
           document.getElementById("formulario_cartas").style.opacity = "1";
@@ -135,6 +142,7 @@ export class HomePage {
 
       ajustes(estado) {
         if (estado == "abrir") {
+          document.getElementById("boton_meritos").style.right = "0px";
           document.getElementById("ajuste_oculto_fondo").style.display = "flex";
           this.statusBar.backgroundColorByHexString('#531e1e');
 
@@ -144,8 +152,10 @@ export class HomePage {
           document.getElementById("mensajes_desplegable").style.transform ="translate(0px)";
           
         } else if (estado == "cerrar") {
+          document.getElementById("boton_meritos").style.right = "-60px";
           document.getElementById("ajuste_oculto_fondo").style.display = "none";
           this.statusBar.backgroundColorByHexString('#702829');
+          document.getElementById("meritos").style.right ="-235px";
 
           /*document.getElementById("ajuste_oculto").style.display = "none"; */
           document.getElementById("mensaje_amigos").style.display = "none";
@@ -169,7 +179,7 @@ export class HomePage {
           localStorage.setItem("fondo", "1");
         } else {
 
-          this.nativeAudio.play('fondo');
+          this.nativeAudio.loop('fondo');
           document.getElementById("fondo").setAttribute('src', 'assets/images/volumen_up.svg');
           localStorage.setItem("fondo", "0");
         }
@@ -199,6 +209,19 @@ export class HomePage {
       } 
     }
 
+    controlador:number = 0;
+    meritos() {
+      if (this.controlador == 0) {
+        document.getElementById("mensajes_desplegable").style.transform ="translateX(-255px)";
+        document.getElementById("meritos").style.right ="0px";
+        this.controlador = 1;
+      } else {
+        document.getElementById("mensajes_desplegable").style.transform ="translateX(0px)";
+        document.getElementById("meritos").style.right ="-235px";
+        this.controlador = 0;
+      }
+
+    }
   /* ESTA PARTE ES PARA LA VISTA DOS */
     cartas: string[];
     tema: number;
@@ -219,6 +242,7 @@ export class HomePage {
       document.getElementById("boton_vista_dos").style.zIndex = "0";
       document.getElementById("formulario_cartas").style.opacity = "0";
       document.getElementById("ajustes").style.display = "block";
+
       setTimeout(function(){
         document.getElementById("formulario_usuarios").style.display = "block";
         document.getElementById("formulario_cartas").style.display = "none";
@@ -229,6 +253,11 @@ export class HomePage {
 
     boton_vista_dos() {
       localStorage.setItem("t", `${this.tema}`);
+
+      document.getElementById("boton_vista_dos").style.bottom = "-3px";
+      setTimeout(function(){
+        document.getElementById("boton_vista_dos").style.bottom = "0px";
+       }, 100);
     }
     posicion_cartas(direccion) {
       if (direccion == "derecha") {
@@ -304,6 +333,10 @@ export class HomePage {
       }
     }
     siguente() {
-      this.router.navigateByUrl('/game-config');
+      var puto_ionic = this;
+      setTimeout(function(){
+        document.getElementById("boton_vista_uno").style.opacity = "0";
+        puto_ionic.router.navigateByUrl('/game-config');
+       }, 150);
     }
 }

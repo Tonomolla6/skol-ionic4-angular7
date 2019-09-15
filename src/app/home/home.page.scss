@@ -340,7 +340,7 @@ div.mensajes_desplegable {
     justify-content: space-around;
 }
 
-div.mensajes_desplegable div.volumen {
+div.volumen {
     background-color: white;
     border: 3px solid black;
     color: black;
@@ -350,6 +350,7 @@ div.mensajes_desplegable div.volumen {
     border-radius: 13px;
     width: max-content;
     padding: 3px 15PX;
+    margin: 10px;
 }
 
 div.mensaje_alerta {
@@ -386,6 +387,14 @@ div.info_oculto {
     align-items: center;
     position: relative;
     border-radius: 15px;
+    margin: 35px;
+    flex-direction: column;
+}
+
+div.info_oculto h2 {
+    font-size: calc(60 * 80vw / 300);
+    font-family: 'Oraqle Script';
+    margin: 0;
 }
 
 div.info_oculto img {
@@ -397,6 +406,28 @@ div.info_oculto img {
 div.info_oculto p {
     font-size: calc(19 * 80vw / 300);
     text-align: center;
+}
+div.meritos {
+    position: absolute;
+    bottom: 45px;
+    right: -235px;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    z-index: 10;
+}
+
+div.meritos div {
+    margin: 5px;
+}
+
+img.boton_meritos {
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    margin: 10px;
+    z-index: 10;
+    transition: 1s;
 }
 
 @media(max-width:345px) {

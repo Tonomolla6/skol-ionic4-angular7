@@ -101,13 +101,10 @@
 
     <div id="info_oculto" class="info_oculto">
       <img (click)='ajustes("cerrar")' (click)='sonidos("salir")' width="30px" src="assets/images/X.svg"/>
+      <h2>Descripción</h2>
       <p id="descripcion">{{descripcion[0]}}</p>  
     </div>
 
-   
-
-    
-    
   </div>
   <div id="ajuste_desplegable" class="ajuste_desplegable">
     <img id="fondo" class="icono" (click)='volumen("fondo")' width="22px" src="assets/images/volumen_up.svg"/>
@@ -121,5 +118,13 @@
       <div class="volumen">SONIDO BOTONES</div>
     <div class="volumen">PUNTUA LA APP</div>
   </div>
+
+  <div id="meritos" class="meritos">
+    <div class="volumen">CREATED BY @tonomolla6</div>
+    <div class="volumen">MUSIC BY @dakkumusic</div>
+  </div>
+
+  <img id="boton_meritos" class="boton_meritos" (click)='meritos()' (click)='sonidos("normal")' width="44px" src="assets/images/program.svg"/>
+
 
 </ion-content>
