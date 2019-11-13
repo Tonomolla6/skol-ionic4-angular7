@@ -1,13 +1,3 @@
-ion-content {
-    overflow: hidden;
-}
-div.bloque {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-    z-index: 24;
-}
 div.atras {
     opacity: 0;
     transition: 1s;
@@ -20,20 +10,6 @@ div.atras {
     margin-top: 13px;
     position: absolute;
     z-index: 3;
-}
-img.camarero {
-    z-index: 1;
-    position: absolute;
-    width: 55px;
-    top: -21px;
-    left: 50vw;
-    transition: 1.5s;
-}
-
-img.barrasuperior {
-    position: relative;
-    z-index: 2;
-    bottom: -1px;
 }
 
 div.partesuperior {
@@ -149,6 +125,7 @@ div.formulario_cartas {
     opacity: 0;
     transform: translateY(-50px);
     display: none;
+    justify-content: space-around;
     align-items: center;
     position: relative;
 }
@@ -159,18 +136,14 @@ div.formulario_cartas img {
 
 div.formulario_cartas .img1 {
     position: absolute;
-    right: 0;
+    right:0;
     margin-right: 10px;
-    z-index: 3;
-    transition: 0.1s
 }
 
 div.formulario_cartas .img2 {
     position: absolute;
-    left: 0;
+    left:0;
     margin-left: 10px;
-    z-index: 3;
-    transition: 0.1s
 }
 
 div.formulario_cartas div.disenyo_cartas {
@@ -178,18 +151,7 @@ div.formulario_cartas div.disenyo_cartas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    left: -100vw;
 }
-
-div.formulario_cartas div.disenyo_cartas div.cartas_slider {
-    display: flex;
-    position: relative;
-    left: 0vw;
-    transition: 0.600s;
-    z-index: 2;
-}
-
 
 div.formulario_cartas div.carta {
     width: 250px;
@@ -200,7 +162,6 @@ div.formulario_cartas div.carta {
     align-items: center;
     border: 3px solid black;
     position: relative;
-    margin: 0px calc(50vw - 125px);
 }
 
 div.formulario_cartas div.carta img {
@@ -209,11 +170,10 @@ div.formulario_cartas div.carta img {
     right: -32px;
 }
 
-div.formulario_cartas div.carta img.carta_fondo {
+div.formulario_cartas div.carta div.carta_fondo {
     width: 210px;
     height: 200px;
-    margin: 13px;
-    transform: translatex(-36px);
+    background-color: black;
 }
 
 div.formulario_cartas h2 {
@@ -259,7 +219,6 @@ img.ajustes {
     bottom: 0;
     left: 0;
     margin: 10px;
-    transition: 1s;
 }
 
 div.ajuste_oculto_fondo {
@@ -299,60 +258,6 @@ div.ajuste_oculto img {
     top: 0;
 }
 
-div.ajuste_desplegable {
-    position: absolute;
-    bottom: 50px;
-    z-index: 11;
-    left: 10px;
-    background-color: #692222;
-    border: 3px solid black;
-    width: 55px;
-    height: 170px;
-    display: flex;
-    transition: 0.5s;
-    border-radius: 15px;
-    transform: translateX(-65px);
-    align-items: center;
-    flex-direction: column;
-}
-
-div.ajuste_desplegable img.x {
-    position: relative;
-    bottom: -13px;
-}
-
-div.ajuste_desplegable img.icono {
-    position: relative;
-    margin: 11px 10px;
-}  
-
-div.mensajes_desplegable {
-    position: absolute;
-    bottom: 48px;
-    z-index: 10;
-    left: 75px;
-    transform: translateX(-255px);
-    transition: 1s;
-    height: 170px;
-    width: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-div.volumen {
-    background-color: white;
-    border: 3px solid black;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 13px;
-    width: max-content;
-    padding: 3px 15PX;
-    margin: 10px;
-}
-
 div.mensaje_alerta {
     position: absolute;
     width: 80vw;
@@ -387,14 +292,6 @@ div.info_oculto {
     align-items: center;
     position: relative;
     border-radius: 15px;
-    margin: 35px;
-    flex-direction: column;
-}
-
-div.info_oculto h2 {
-    font-size: calc(60 * 80vw / 300);
-    font-family: 'Oraqle Script';
-    margin: 0;
 }
 
 div.info_oculto img {
@@ -406,28 +303,6 @@ div.info_oculto img {
 div.info_oculto p {
     font-size: calc(19 * 80vw / 300);
     text-align: center;
-}
-div.meritos {
-    position: absolute;
-    bottom: 45px;
-    right: -235px;
-    display: flex;
-    flex-direction: column;
-    transition: 1s;
-    z-index: 10;
-}
-
-div.meritos div {
-    margin: 5px;
-}
-
-img.boton_meritos {
-    position: absolute;
-    bottom: 0;
-    right: -60px;
-    margin: 10px;
-    z-index: 10;
-    transition: 1s;
 }
 
 @media(max-width:345px) {
@@ -503,7 +378,6 @@ img.boton_meritos {
     }
     img.ajustes{
         width: 23px;
-        transition: 1s;
     }
     div.formulario_usuarios #lista_usuarios ion-input {
         font-size: 14.5px;

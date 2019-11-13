@@ -152,8 +152,11 @@ div.separador {
     height: 37px;
     width: 22px;
     border: 2px solid black;
+    transition: 2s;
 }
-
+#boton_vista_tres {
+    transition: 2s;
+}
 
 #cubo {
     position: absolute;

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { File } from '@ionic-native/file/ngx';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 })
 export class GameConfigPage implements OnInit {
 
-  constructor(public router: Router, private statusBar: StatusBar, private file: File ,public nativeAudio: NativeAudio) { 
+  constructor(public router: Router, private statusBar: StatusBar, private file: File) { 
 
   }
 
@@ -114,45 +113,22 @@ export class GameConfigPage implements OnInit {
 
     }
   }
-
-  sonidos(tipo) {
-    var activador = localStorage.getItem("sonido");
-    
-    if (activador == "yes") {
-      if (tipo == "normal") {
-        this.nativeAudio.play('normal');
-      } else if (tipo == "salir") {
-        this.nativeAudio.play('salir');
-      }
-    } 
-  }
-
+  
   empieza_el_juego() {
-    /*Efecto del boton*/
-    document.getElementById("boton_vista_tres").style.bottom = "-3px";
-    document.getElementById("palo").style.bottom = "-3px";
-    setTimeout(function(){
-      document.getElementById("boton_vista_tres").style.bottom = "0px";
-      document.getElementById("palo").style.bottom = "0px";
-     }, 100);
-     setTimeout(function(){
-      document.getElementById("palo").style.transition = "2s";
-      document.getElementById("boton_vista_tres").style.transition = "2s";
-      /*Se borran las notas y el atrás*/
-      document.getElementById("notas").style.opacity = "0";
-      document.getElementById("atras").style.opacity = "0";
-
-      /*Susituye el titulo del boton*/
-      document.getElementById("titulo_boton").innerHTML = "PREPARANDO...";
-      
-      document.getElementById("boton_vista_tres").style.transform = "translateY(-40vh)";
-      document.getElementById("palo").style.height = "45.3vh";
-     }, 150);
-
     /*Guardamos la información en el LocalStorage*/
     localStorage.setItem("pn", `${this.preguntas}`);
     localStorage.setItem("d", `${this.dificultad}`);
-   
+
+    /*Se borran las notas y el atrás*/
+    document.getElementById("notas").style.opacity = "0";
+    document.getElementById("atras").style.opacity = "0";
+
+    /*Susituye el titulo del boton*/
+    document.getElementById("titulo_boton").innerHTML = "PREPARANDO...";
+    
+    document.getElementById("boton_vista_tres").style.transform = "translateY(-40vh)";
+    document.getElementById("palo").style.height = "45.3vh";
+
     /*Configuramos y preparamos las preguntas para questions*/
     var json_importado =  localStorage.getItem("tg");
     var temas = JSON.parse(json_importado);
@@ -247,6 +223,7 @@ export class GameConfigPage implements OnInit {
       document.getElementById("boton_vista_tres").style.transform = "translateY(0vh)";
       document.getElementById("palo").style.height = "0";
       document.getElementById("cubo").style.top = "-100vh";
+      miguel.statusBar.backgroundColorByHexString('#702829');
     }, 4500);
 
   }

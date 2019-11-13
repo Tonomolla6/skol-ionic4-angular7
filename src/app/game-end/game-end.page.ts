@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
-
 
 @Component({
   selector: 'app-game-end',
@@ -11,22 +9,10 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 })
 export class GameEndPage implements OnInit {
 
-  constructor(private screenOrientation: ScreenOrientation, public nativeAudio: NativeAudio) {
+  constructor(private screenOrientation: ScreenOrientation) { 
   }
 
   ngOnInit() {
   }
 
-  sonidos(tipo) {
-    var activador = localStorage.getItem("sonido");
-    
-    if (activador == "yes") {
-      if (tipo == "normal") {
-        this.nativeAudio.play('normal');
-      } else if (tipo == "salir") {
-        this.nativeAudio.play('salir');
-      }
-    } 
-  }
 }
-

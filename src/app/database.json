@@ -2,7 +2,7 @@
   "temas": [
     [
       "Una fiesta pendiente",
-      "El tema mas \"light\", son preguntas sueltas de temas diferentes para jugar con unos buenos amigos y sobre todo para disfrutar la fiesta!!!",
+      "Este tema está creado especialmente para un grupo de amigos sin ninguna clase de interés sexual ni sentimental, és para pasarlo bien con el alchol y estar listos para la fiesta!!",
       [
         [
           "none",
@@ -42,11 +42,11 @@
         ],
         [
           "none",
-          "Solteros os toca pillar, bebe @x si no teneis ningun lio cerca."
+          "Solteros os toca pillar,beber @x si no teneis ningun lio cerca."
         ],
         [
           "none",
-          "Solteros os toca pillar, bebe @x tragos si no teneis ningun lio cerca."
+          "Solteros os toca pillar, bebed @x tragos si no teneis ningun lio cerca."
         ],
         [
           "none",
@@ -194,7 +194,7 @@
         ],
         [
           "Juegos",
-          "\"Sagas de cine\" la persona que repita o no conozca ninguna bebe @x tragos."
+          "\"Sagas de cine\" la persona que repita o no conozca ninguna beberá @x tragos."
         ],
         [
           "Juegos",
@@ -309,36 +309,36 @@
           "@user1 cambia tu vaso con @user2."
         ],
         [
-          "none",
-          "Los jugadores con pareja deben repartir $x tragos a un solo jugador."
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "none",
-          "Aquellas y aquellos que han leído a escondidas los mensajes de texto de su novio/novia beben $x tragos."
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "Votaciones",
-          "Elegid democráticamente quien creeis que és el más estúpido en una fiesta, que beba @x tragos."
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "Superpoderes",
-          "¡$user1, eres el mago! Intercambia los vasos de los jugadores cuando y como quieras hasta que acabe la partida."
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "none",
-          "Bebe 5 tragos si piensas que algún jugador tiene un nombre de mierd*."
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "Rico o pobre?",
-          "¡El jugador con menos dinero en efectivo en la cartera bebe $x tragos!"
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "Rico o pobre?",
-          "¡El jugador con más dinero en efectivo en la cartera bebe $x tragos!"
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
-          "none",
-          "Las/los jugadores que bebieron en la ronda anteriór que repartan $x tragos."
+          "Cambio",
+          "@user1 cambia tu vaso con @user2."
         ],
         [
           "Cambio",
@@ -348,7 +348,7 @@
       [
         [
           "none",
-          "@user1, bebe tantos tragos como novias/os te hayan dejado."
+          "@user1, bebe tantos tragos como novias te hayan dejado."
         ],
         [
           "none",
@@ -368,7 +368,7 @@
         ],
         [
           "none",
-          "@user1, recuerda cuantas cobras te han hecho este año, llora, acabate la copa."
+          "@user1, recuerda cuantas cobras te han hecho este año, llora, acabate la copa. "
         ],
         [
           "none",
@@ -392,7 +392,7 @@
         ],
         [
           "Feminismo",
-          "@user1 si eres mujer bebe @x tragos, si no lo eres, repartelos."
+          "@user1 si eres mujeres bebe @x tragos, si no lo eres, repartelos."
         ],
         [
           "Feminismo",
@@ -429,20 +429,8 @@
       ]
     ],
     [
-      "Un poco de calor!",
-      "Si hay alguien que te atrae en este grupo... Has elegido bien, este es tu tema. Vamos a hacer que arda el ambiente!"
-    ],
-    [
-      "Prueba o verdad",
-      "Espero que llevéis toda la adolescencia jugando a juegos de consola por que si es así este es vuestro tema!"
-    ],
-    [
-      "Coma etílico",
-      "Hacedme caso, NUNCA habéis estado en una fiesta de verdad, probad este tema, y partíos de la risa con las burradas más locas."
-    ],
-    [
-      "Solo para adultos",
-      "Este es un tema para adultos, son retos y pruebas traviesas, la parte erótica de la aplicación, a disfrutar!"
+      "Prueba",
+      "Descripcion"
     ]
   ]
 }
